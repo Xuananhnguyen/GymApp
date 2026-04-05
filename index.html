@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Plan — Nguyen Xuan Anh</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0f14;--surface:#161920;--surface2:#1e2230;--border:#2a2f3d;--text:#e8eaf0;--muted:#6b7280;--accent:#4f8ef7;--accent2:#34d399;--warn:#f59e0b;--danger:#f87171;--purple:#a78bfa;--teal:#2dd4bf}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:54px}
+.nav-brand{font-family:'Space Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.08em}
+.nav-tabs{display:flex;gap:4px}
+.nav-tab{padding:6px 12px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s}
+.nav-tab:hover{color:var(--text);background:var(--surface)}
+.nav-tab.active{color:var(--accent);background:rgba(79,142,247,.12)}
+.page{display:none;padding:24px 20px;max-width:860px;margin:0 auto}
+.page.active{display:block}
+.hero{margin-bottom:28px}
+.hero-label{font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.hero-title{font-size:26px;font-weight:600;line-height:1.2;margin-bottom:4px}
+.hero-sub{font-size:13px;color:var(--muted)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+.stat-val{font-size:20px;font-weight:600;margin-bottom:3px}
+.stat-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.c-blue{color:var(--accent)}.c-green{color:var(--accent2)}.c-warn{color:var(--warn)}.c-red{color:var(--danger)}.c-purple{color:var(--purple)}
+.section-title{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:18px}
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 6px;text-align:center;cursor:pointer;transition:all .18s}
+.day-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.day-card.selected{border-color:var(--accent);background:rgba(79,142,247,.08)}
+.day-name{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);margin-bottom:5px}
+.day-type{font-size:9px;font-weight:600;padding:2px 5px;border-radius:5px;display:inline-block;margin-bottom:5px}
+.type-push{background:rgba(79,142,247,.15);color:var(--accent)}
+.type-pull{background:rgba(52,211,153,.15);color:var(--accent2)}
+.type-legs{background:rgba(245,158,11,.15);color:var(--warn)}
+.type-upper{background:rgba(167,139,250,.15);color:var(--purple)}
+.type-cardio{background:rgba(45,212,191,.15);color:var(--teal)}
+.type-rest{background:rgba(107,114,128,.1);color:var(--muted)}
+.type-cheat{background:rgba(248,113,113,.12);color:var(--danger)}
+.day-muscle{font-size:9px;color:var(--muted);line-height:1.3}
+.detail-panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:20px}
+.detail-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.detail-badge{font-size:10px;font-weight:600;padding:3px 10px;border-radius:18px}
+.detail-title{font-size:15px;font-weight:600}
+.detail-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.warmup-note{font-size:11px;color:var(--muted);background:var(--surface2);border-radius:7px;padding:9px 12px;margin-bottom:14px}
+/* Exercise rows */
+.ex-list{display:flex;flex-direction:column;gap:10px}
+.ex-row{background:var(--surface2);border-radius:10px;overflow:hidden}
+.ex-main{display:flex;align-items:flex-start;gap:12px;padding:12px 14px}
+.ex-info{flex:1}
+.ex-name{font-weight:600;font-size:13px;margin-bottom:3px}
+.ex-note{font-size:11px;color:var(--muted);line-height:1.4;margin-bottom:8px}
+.ex-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.set-pill{font-size:11px;font-weight:600;padding:2px 9px;border-radius:6px}
+.meta-tag{font-size:11px;color:var(--muted);background:rgba(255,255,255,.05);padding:2px 8px;border-radius:6px}
+.video-btn{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#ff4444;background:rgba(255,68,68,.1);border:1px solid rgba(255,68,68,.2);border-radius:7px;padding:5px 10px;cursor:pointer;white-space:nowrap;flex-shrink:0;text-decoration:none;transition:all .15s}
+.video-btn:hover{background:rgba(255,68,68,.2);border-color:rgba(255,68,68,.4)}
+.video-btn svg{flex-shrink:0}
+/* Video embed */
+.video-embed{display:none;padding:0 14px 14px}
+.video-embed.open{display:block}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:8px;overflow:hidden}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.video-close{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;font-size:12px;color:var(--muted)}
+.video-close button{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:3px 10px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif}
+/* Meal */
+.meal-list{display:flex;flex-direction:column;gap:8px}
+.meal-item{background:var(--surface2);border-radius:10px;padding:12px 14px;display:flex;align-items:flex-start;gap:12px}
+.meal-time-col{min-width:46px}
+.meal-time{font-family:'Space Mono',monospace;font-size:10px;color:var(--accent)}
+.meal-name{font-weight:600;font-size:13px;margin-bottom:3px}
+.meal-food{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:6px}
+.macro-row{display:flex;gap:6px;flex-wrap:wrap}
+.macro-pill{font-size:10px;padding:2px 7px;border-radius:5px;font-weight:500}
+.mp-p{background:rgba(79,142,247,.15);color:var(--accent)}
+.mp-c{background:rgba(52,211,153,.15);color:var(--accent2)}
+.mp-f{background:rgba(245,158,11,.15);color:var(--warn)}
+.mp-cal{background:rgba(107,114,128,.12);color:var(--muted)}
+.mp-fruit{background:rgba(248,113,113,.12);color:var(--danger)}
+/* Note */
+.note-card{background:rgba(79,142,247,.05);border:1px solid rgba(79,142,247,.15);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.note-title{font-size:11px;font-weight:600;color:var(--accent);margin-bottom:4px}
+.note-text{font-size:11px;color:var(--muted);line-height:1.6}
+/* Progress */
+.progress-wrap{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:20px}
+.checklist{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.check-item{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px;cursor:pointer;transition:all .15s;user-select:none}
+.check-item:hover{border-color:var(--accent2)}
+.check-item.done{opacity:.55}
+.check-item.done .check-text{text-decoration:line-through;color:var(--muted)}
+.check-box{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}
+.check-item.done .check-box{background:var(--accent2);border-color:var(--accent2)}
+.check-box svg{display:none}
+.check-item.done .check-box svg{display:block}
+.check-text{font-size:12px}
+.check-meta{font-size:10px;color:var(--muted);margin-top:1px}
+/* Timeline */
+.timeline{display:flex;flex-direction:column;gap:0;position:relative}
+.timeline::before{content:'';position:absolute;left:17px;top:20px;bottom:20px;width:1px;background:var(--border)}
+.tl-item{display:flex;gap:14px;padding-bottom:18px;position:relative}
+.tl-dot{width:34px;height:34px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--surface);font-size:13px;z-index:1}
+.tl-content{flex:1;padding-top:5px}
+.tl-phase{font-size:11px;font-weight:600;color:var(--accent);margin-bottom:2px}
+.tl-title{font-size:13px;font-weight:600;margin-bottom:3px}
+.tl-desc{font-size:11px;color:var(--muted);line-height:1.5}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.page.active>*{animation:fadeUp .28s ease both}
+.page.active>*:nth-child(2){animation-delay:.05s}
+.page.active>*:nth-child(3){animation-delay:.1s}
+.page.active>*:nth-child(4){animation-delay:.15s}
+@media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr)}.week-grid{grid-template-columns:repeat(4,1fr)}.page{padding:18px 14px}.nav-tab{padding:5px 8px;font-size:11px}.ex-main{flex-wrap:wrap}.video-btn{width:100%}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-brand">GYM / NXA</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPage('overview',this)">Tổng quan</button>
+    <button class="nav-tab" onclick="showPage('workout',this)">Lịch tập</button>
+    <button class="nav-tab" onclick="showPage('meal',this)">Thực đơn</button>
+    <button class="nav-tab" onclick="showPage('progress',this)">Tiến độ</button>
+  </div>
+</nav>
+
+<!-- OVERVIEW -->
+<div class="page active" id="page-overview">
+  <div class="hero">
+    <div class="hero-label">Kế hoạch cá nhân</div>
+    <div class="hero-title">Nguyen Xuan Anh</div>
+    <div class="hero-sub">Mục tiêu: Giảm mỡ + Xây cơ · 5–5.5 tháng</div>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-val c-warn">78 kg</div><div class="stat-lbl">Cân hiện tại</div></div>
+    <div class="stat-card"><div class="stat-val c-green">67 kg</div><div class="stat-lbl">Mục tiêu</div></div>
+    <div class="stat-card"><div class="stat-val c-blue">−11 kg</div><div class="stat-lbl">Cần giảm</div></div>
+    <div class="stat-card"><div class="stat-val c-purple">~25%</div><div class="stat-lbl">Body fat</div></div>
+  </div>
+  <div class="section-title">Timeline — 3 giai đoạn</div>
+  <div class="timeline" style="margin-bottom:24px">
+    <div class="tl-item"><div class="tl-dot" style="border-color:var(--warn);color:var(--warn)">1</div><div class="tl-content"><div class="tl-phase">Tuần 1–6 · Giai đoạn 1</div><div class="tl-title">Tái thích nghi & Reset chuyển hóa</div><div class="tl-desc">4 buổi/tuần · Full body · ~1.850 kcal · Protein 140g · Mục tiêu: −3 đến −4 kg</div></div></div>
+    <div class="tl-item"><div class="tl-dot" style="border-color:var(--accent);color:var(--accent)">2</div><div class="tl-content"><div class="tl-phase">Tuần 7–18 · Giai đoạn 2</div><div class="tl-title">Recomposition — Đốt mỡ + Xây cơ</div><div class="tl-desc">5 buổi/tuần · Push/Pull/Legs/Upper · ~1.750 kcal · Protein 155g · Mục tiêu: −5 đến −6 kg</div></div></div>
+    <div class="tl-item"><div class="tl-dot" style="border-color:var(--accent2);color:var(--accent2)">3</div><div class="tl-content"><div class="tl-phase">Tuần 19–26 · Giai đoạn 3</div><div class="tl-title">Finishing — Về đích & Định hình</div><div class="tl-desc">5–6 buổi/tuần · Thêm core · ~1.650 kcal · Protein 165g · Về 66–68 kg</div></div></div>
+  </div>
+  <div class="section-title">Nguyên tắc quan trọng</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div class="note-card"><div class="note-title">Ngày tập</div><div class="note-text">~1.750 kcal · P 155g · C 180g · F 50g</div></div>
+    <div class="note-card" style="background:rgba(52,211,153,.05);border-color:rgba(52,211,153,.15)"><div class="note-title" style="color:var(--accent2)">Ngày nghỉ / Cardio</div><div class="note-text">~1.350 kcal · P 125g · C 110g · F 38g</div></div>
+    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Đi bộ hằng ngày</div><div class="note-text">19h30–20h · 30 phút · Bỏ tối thứ 7</div></div>
+    <div class="note-card" style="background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15)"><div class="note-title" style="color:var(--danger)">Cheat meal</div><div class="note-text">Tối thứ 7 · 1 lần/tuần · Sáng+trưa vẫn ăn bình thường</div></div>
+  </div>
+</div>
+
+<!-- WORKOUT -->
+<div class="page" id="page-workout">
+  <div class="hero">
+    <div class="hero-label">Lịch tập</div>
+    <div class="hero-title">Chi tiết & Video hướng dẫn</div>
+    <div class="hero-sub">Bấm nút YouTube để xem kỹ thuật từng bài</div>
+  </div>
+  <div class="section-title">Chọn ngày</div>
+  <div class="week-grid">
+    <div class="day-card selected" onclick="selectDay('t2',this)"><div class="day-name">THỨ 2</div><div class="day-type type-push">PUSH</div><div class="day-muscle">Ngực · Vai · Tricep</div></div>
+    <div class="day-card" onclick="selectDay('t3',this)"><div class="day-name">THỨ 3</div><div class="day-type type-pull">PULL</div><div class="day-muscle">Lưng · Bicep</div></div>
+    <div class="day-card" onclick="selectDay('t4',this)"><div class="day-name">THỨ 4</div><div class="day-type type-cardio">CARDIO</div><div class="day-muscle">HIIT · Core</div></div>
+    <div class="day-card" onclick="selectDay('t5',this)"><div class="day-name">THỨ 5</div><div class="day-type type-legs">LEGS</div><div class="day-muscle">Quad · Ham · Mông</div></div>
+    <div class="day-card" onclick="selectDay('t6',this)"><div class="day-name">THỨ 6</div><div class="day-type type-upper">UPPER</div><div class="day-muscle">Thân trên</div></div>
+    <div class="day-card" onclick="selectDay('t7',this)"><div class="day-name">THỨ 7</div><div class="day-type type-cheat">NGHỈ</div><div class="day-muscle">Cheat meal</div></div>
+    <div class="day-card" onclick="selectDay('cn',this)"><div class="day-name">CN</div><div class="day-type type-rest">NGHỈ</div><div class="day-muscle">Hồi phục</div></div>
+  </div>
+
+  <!-- T2 PUSH -->
+  <div class="detail-panel" id="workout-t2">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(79,142,247,.15);color:var(--accent)">PUSH</span><div><div class="detail-title">Thứ 2 — Ngực · Vai · Tricep</div><div class="detail-sub">12h–12h45 · 7 bài · 22 sets</div></div></div>
+    <div class="warmup-note">Khởi động 5': xoay khớp vai · xoay cổ tay · 10 push-up chậm · 1 set bench nhẹ 50% tạ</div>
+    <div class="ex-list">
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Bench press (tạ đòn nằm đẩy)</div>
+            <div class="ex-note">Hạ tạ chậm 2s, đẩy lên nhanh. Tay rộng hơn vai một nắm. Lưng hơi cong tự nhiên, không bắc cầu.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">4 sets</span><span class="meta-tag">8–10 reps</span><span class="meta-tag">Nghỉ 90s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-bench',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-bench">
+          <div class="video-close"><span>Bench Press — Kỹ thuật chuẩn</span><button onclick="closeVideo('v-bench')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Incline dumbbell press (30–45°)</div>
+            <div class="ex-note">Khuỷu tay góc 45° với thân, không mở ngang 90°. Hạ sâu để stretch ngực trên.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-incline',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-incline">
+          <div class="video-close"><span>Incline DB Press</span><button onclick="closeVideo('v-incline')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/8iPEnn-ltC8" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Cable fly / Pec deck</div>
+            <div class="ex-note">Siết cơ ngực ở điểm chạm, không cần tạ nặng. Bài kết thúc ngực.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 60s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-cablefly',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-cablefly">
+          <div class="video-close"><span>Cable Fly / Pec Deck</span><button onclick="closeVideo('v-cablefly')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/Iwe6AmxVf7o" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Overhead press — OHP</div>
+            <div class="ex-note">Không ưỡn lưng khi đẩy. Khóa khuỷu nhẹ ở trên cùng. Có thể đứng hoặc ngồi.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">8–10 reps</span><span class="meta-tag">Nghỉ 90s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-ohp',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-ohp">
+          <div class="video-close"><span>Overhead Press — OHP</span><button onclick="closeVideo('v-ohp')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/2yjwXTZQDDI" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Lateral raise (nâng tạ ngang)</div>
+            <div class="ex-note">Tạ 4–8 kg. Nâng đến ngang vai, ngón tay út cao hơn ngón cái. Không swing người.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 60s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-lateral',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-lateral">
+          <div class="video-close"><span>Lateral Raise</span><button onclick="closeVideo('v-lateral')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Tricep pushdown (kéo cáp xuống)</div>
+            <div class="ex-note">Khuỷu tay sát hông, không di chuyển. Duỗi thẳng hoàn toàn ở dưới, siết tricep.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 60s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-pushdown',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-pushdown">
+          <div class="video-close"><span>Tricep Pushdown</span><button onclick="closeVideo('v-pushdown')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/2-LAMcpzODU" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main">
+          <div class="ex-info">
+            <div class="ex-name">Overhead tricep extension</div>
+            <div class="ex-note">Giơ tạ lên đầu, hạ ra sau gáy. Khuỷu tay không mở sang ngang.</div>
+            <div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 60s</span></div>
+          </div>
+          <a class="video-btn" onclick="toggleVideo('v-triext',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a>
+        </div>
+        <div class="video-embed" id="v-triext">
+          <div class="video-close"><span>Overhead Tricep Extension</span><button onclick="closeVideo('v-triext')">Đóng ✕</button></div>
+          <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YbX7Wd8jQ-Q" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T3 PULL -->
+  <div class="detail-panel" id="workout-t3" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(52,211,153,.15);color:var(--accent2)">PULL</span><div><div class="detail-title">Thứ 3 — Lưng · Bicep</div><div class="detail-sub">12h–12h45 · 6 bài · 20 sets</div></div></div>
+    <div class="warmup-note">Khởi động 5': xoay khớp vai · 10 dead hang trên xà · 1 set lat pulldown nhẹ</div>
+    <div class="ex-list">
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Deadlift (kéo tạ đòn từ sàn)</div><div class="ex-note">Lưng thẳng suốt. Hông xuống, ngực lên, đẩy chân vào sàn. Không tròn lưng dưới.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">4 sets</span><span class="meta-tag">5–6 reps</span><span class="meta-tag">Nghỉ 2 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-deadlift',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-deadlift"><div class="video-close"><span>Deadlift — Kỹ thuật chuẩn</span><button onclick="closeVideo('v-deadlift')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/op9kVnSso6Q" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Lat pulldown (kéo xà xuống máy)</div><div class="ex-note">Kéo xuống ngực, ngả người ra sau nhẹ. Siết lưng ở điểm thấp nhất.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">4 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-latpull',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-latpull"><div class="video-close"><span>Lat Pulldown</span><button onclick="closeVideo('v-latpull')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/CAwf7n6Luuc" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Seated cable row (kéo cáp ngồi)</div><div class="ex-note">Kéo về rốn, khuỷu tay sát hông. Ngực ra trước khi kéo, không giật bằng lưng dưới.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-cablerow',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-cablerow"><div class="video-close"><span>Seated Cable Row</span><button onclick="closeVideo('v-cablerow')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/GZbfZ033f74" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Face pull (kéo cáp về mặt)</div><div class="ex-note">Cáp ngang tầm mắt. Kéo về hai bên tai, khuỷu tay cao ngang vai. Giúp cân bằng vai, sửa lưng còng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-facepull',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-facepull"><div class="video-close"><span>Face Pull</span><button onclick="closeVideo('v-facepull')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/rep-qVOkqgk" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell curl (cuộn tạ đòn)</div><div class="ex-note">Khuỷu tay cố định sát hông. Không đánh hông để giật tạ lên.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-bbcurl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-bbcurl"><div class="video-close"><span>Barbell Curl</span><button onclick="closeVideo('v-bbcurl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Hammer curl (tạ tay xoay dọc)</div><div class="ex-note">Tạ cầm dọc như cầm búa. Tập brachialis + brachioradialis — làm tay trông đầy hơn.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-hammer',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-hammer"><div class="video-close"><span>Hammer Curl</span><button onclick="closeVideo('v-hammer')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/zC3nLlEvin4" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T4 CARDIO -->
+  <div class="detail-panel" id="workout-t4" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">CARDIO</span><div><div class="detail-title">Thứ 4 — HIIT + Core</div><div class="detail-sub">12h–12h40 · ~40 phút · Không tập tạ</div></div></div>
+    <div class="warmup-note">Khởi động 3': đi bộ máy 5–6 km/h trước khi vào HIIT</div>
+    <div class="ex-list">
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Chạy máy / Xe đạp HIIT</div><div class="ex-note">40s cường độ cao (9–11 km/h) + 20s đi chậm. Nhịp tim 150–160 bpm. Lặp 8 vòng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">8 vòng</span><span class="meta-tag">40s + 20s</span><span class="meta-tag">~25 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-hiit',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-hiit"><div class="video-close"><span>HIIT Treadmill</span><button onclick="closeVideo('v-hiit')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ml6cT4AZdqI" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Plank</div><div class="ex-note">Thân thẳng từ đầu đến gót. Không để hông võng. Thở đều.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">3 sets</span><span class="meta-tag">30–45s</span><span class="meta-tag">Nghỉ 30s</span></div></div><a class="video-btn" onclick="toggleVideo('v-plank',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-plank"><div class="video-close"><span>Plank — Kỹ thuật đúng</span><button onclick="closeVideo('v-plank')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ASdvN_XEl_c" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Hanging knee raise (treo xà gập gối)</div><div class="ex-note">Gập gối lên ngực chậm. Không đánh lắc. Dùng captain's chair nếu chưa treo được lâu.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-kneeraise',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-kneeraise"><div class="video-close"><span>Hanging Knee Raise</span><button onclick="closeVideo('v-kneeraise')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/p9hhX_Sx5v0" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Cable crunch (gập bụng cáp)</div><div class="ex-note">Quỳ gối, cáp từ trên cao, gập người xuống siết bụng. Không kéo bằng cánh tay.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-cablecrunch',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-cablecrunch"><div class="video-close"><span>Cable Crunch</span><button onclick="closeVideo('v-cablecrunch')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2fbujeH3F0E" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T5 LEGS -->
+  <div class="detail-panel" id="workout-t5" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(245,158,11,.15);color:var(--warn)">LEGS</span><div><div class="detail-title">Thứ 5 — Quad · Hamstring · Mông · Bắp chân</div><div class="detail-sub">12h–12h45 · 6 bài · 20 sets</div></div></div>
+    <div class="warmup-note">Khởi động 5': xoay hông · squat không tạ 15 reps · lunge chỗ 10 reps mỗi chân</div>
+    <div class="ex-list">
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell squat (squat tạ đòn)</div><div class="ex-note">Ngồi sâu đến đùi song song sàn. Lưng thẳng. Bài quan trọng nhất — ưu tiên kỹ thuật trước tạ nặng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">4 sets</span><span class="meta-tag">6–8 reps</span><span class="meta-tag">Nghỉ 2 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-squat',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-squat"><div class="video-close"><span>Barbell Squat — Kỹ thuật chuẩn</span><button onclick="closeVideo('v-squat')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ultWZbUMPL8" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Leg press (máy đẩy chân)</div><div class="ex-note">Chân giữa bàn đạp. Không khóa gối hoàn toàn. Hạ chậm 3s.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legpress',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-legpress"><div class="video-close"><span>Leg Press</span><button onclick="closeVideo('v-legpress')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/IZxyjW7MPJQ" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Leg extension (máy duỗi chân)</div><div class="ex-note">Siết chặt quad ở điểm duỗi thẳng. Không cần tạ quá nặng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legext',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-legext"><div class="video-close"><span>Leg Extension</span><button onclick="closeVideo('v-legext')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/YyvSfVjQeL0" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Romanian deadlift — RDL</div><div class="ex-note">Hông đẩy ra sau, lưng thẳng, hạ tạ đến cảm giác căng đùi sau. Không hạ xuống sàn.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-rdl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-rdl"><div class="video-close"><span>Romanian Deadlift — RDL</span><button onclick="closeVideo('v-rdl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2SHsk9AzdjA" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Leg curl (máy cuộn đùi sau)</div><div class="ex-note">Cuộn chậm, giữ 1s ở điểm co, hạ chậm.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legcurl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-legcurl"><div class="video-close"><span>Leg Curl</span><button onclick="closeVideo('v-legcurl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/1Tq3QdYUuHs" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Standing calf raise (kiễng gót)</div><div class="ex-note">Kiễng cao hết mức, giữ 1s, hạ thấp hết mức. Biên độ đầy đủ mới phát triển.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">4 sets</span><span class="meta-tag">15–20 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-calf',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-calf"><div class="video-close"><span>Standing Calf Raise</span><button onclick="closeVideo('v-calf')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/gwLzBJYoWlI" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T6 UPPER -->
+  <div class="detail-panel" id="workout-t6" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(167,139,250,.15);color:var(--purple)">UPPER</span><div><div class="detail-title">Thứ 6 — Thân trên tổng hợp + Core</div><div class="detail-sub">12h–12h42 · 6 bài · 18 sets</div></div></div>
+    <div class="warmup-note">Khởi động 5': band pull-apart · xoay khớp vai · 10 push-up · 1 set row nhẹ</div>
+    <div class="ex-list">
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Dumbbell bench press (tạ tay nằm đẩy)</div><div class="ex-note">Biên độ rộng hơn barbell, stretch ngực tốt hơn. Hạ sâu đến cảm giác căng ngực.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-dbbench',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-dbbench"><div class="video-close"><span>Dumbbell Bench Press</span><button onclick="closeVideo('v-dbbench')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/VmB1G1K7v94" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Chest-supported row (row ngực tựa ghế)</div><div class="ex-note">Nằm sấp trên ghế nghiêng, kéo tạ tay lên. Cô lập lưng giữa tốt hơn bent-over row.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-csrow',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-csrow"><div class="video-close"><span>Chest-Supported Row</span><button onclick="closeVideo('v-csrow')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/T3N-TO4reLQ" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Dumbbell shoulder press (đẩy vai ngồi)</div><div class="ex-note">Ngồi thẳng lưng. Tạ ngang tai, đẩy thẳng lên. Không nhún người để đẩy.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-dbshoulder',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-dbshoulder"><div class="video-close"><span>Dumbbell Shoulder Press</span><button onclick="closeVideo('v-dbshoulder')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/qEwKCR5JCog" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Lateral raise (nâng tạ ngang)</div><div class="ex-note">Lần 2 trong tuần — vai giữa cần volume cao. Tập nhẹ, siết cơ.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-lateral2',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-lateral2"><div class="video-close"><span>Lateral Raise</span><button onclick="closeVideo('v-lateral2')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Superset: Bicep curl + Tricep pushdown</div><div class="ex-note">Làm bicep xong chuyển ngay sang tricep không nghỉ. Nghỉ 60s sau superset. Tiết kiệm ~10 phút.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">12 reps mỗi bài</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-superset',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-superset"><div class="video-close"><span>Bicep Curl</span><button onclick="closeVideo('v-superset')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+      <div class="ex-row">
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Plank + Side plank</div><div class="ex-note">Plank 40s → side plank trái 20s → side plank phải 20s = 1 set. Không nghỉ giữa.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">40s + 20s mỗi bên</span><span class="meta-tag">Nghỉ 30s</span></div></div><a class="video-btn" onclick="toggleVideo('v-sideplank',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="video-embed" id="v-sideplank"><div class="video-close"><span>Side Plank</span><button onclick="closeVideo('v-sideplank')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_rdfjFSFKMY" allowfullscreen loading="lazy"></iframe></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- T7 / CN -->
+  <div class="detail-panel" id="workout-t7" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(248,113,113,.12);color:var(--danger)">NGHỈ</span><div><div class="detail-title">Thứ 7 — Nghỉ chủ động</div><div class="detail-sub">Không tập tạ · Không HIIT</div></div></div>
+    <div class="note-card"><div class="note-title">Hoạt động cho phép</div><div class="note-text">Đi bộ nhẹ 20–30 phút buổi sáng · Giãn cơ 10–15 phút · Foam rolling</div></div>
+    <div class="note-card" style="background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15)"><div class="note-title" style="color:var(--danger)">Cheat meal tối</div><div class="note-text">Thoải mái nhưng dừng ở 80% no · Ưu tiên protein · Hạn chế bia rượu · Không đi bộ tối nay</div></div>
+  </div>
+  <div class="detail-panel" id="workout-cn" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(107,114,128,.1);color:var(--muted)">NGHỈ</span><div><div class="detail-title">Chủ nhật — Nghỉ hoàn toàn</div><div class="detail-sub">Cơ phát triển trong lúc nghỉ</div></div></div>
+    <div class="note-card"><div class="note-title">Ghi nhớ</div><div class="note-text">Sau cheat meal nặng bụng: uống nhiều nước, đi bộ nhẹ 20 phút sáng · Chuẩn bị tinh thần cho tuần mới</div></div>
+  </div>
+</div>
+
+<!-- MEAL -->
+<div class="page" id="page-meal">
+  <div class="hero"><div class="hero-label">Thực đơn</div><div class="hero-title">Kế hoạch ăn uống</div><div class="hero-sub">P = Protein · C = Carb · F = Fat</div></div>
+  <div class="section-title">Chọn loại ngày</div>
+  <div style="display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap">
+    <button class="nav-tab active" onclick="selectMeal('tap',this)">Ngày tập (T2/T3/T5/T6)</button>
+    <button class="nav-tab" onclick="selectMeal('cardio',this)">Cardio/Nghỉ (T4/T7)</button>
+    <button class="nav-tab" onclick="selectMeal('cn',this)">Chủ nhật (refeed)</button>
+  </div>
+  <div id="meal-tap">
+    <div class="meal-list">
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">6h30</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">3 trứng luộc / chiên ít dầu · 2 lát bánh mì đen (60g)</div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 11g</span><span class="macro-pill mp-cal">315 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">11h</div></div><div style="flex:1"><div class="meal-name">Snack trước tập <span style="font-size:10px;color:var(--danger);font-weight:600">— Bắt buộc</span></div><div class="meal-food">Khoai lang hấp (120–150g) · Sữa chua không đường (100g)</div><div class="macro-row"><span class="macro-pill mp-p">P 8g</span><span class="macro-pill mp-c">C 28g</span><span class="macro-pill mp-f">F 2g</span><span class="macro-pill mp-cal">162 kcal</span></div></div></div>
+      <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">13h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa — Sau tập <span style="font-size:10px;color:var(--accent2);font-weight:600">★ Quan trọng nhất</span></div><div class="meal-food">Cơm (150g) · Ức gà / thịt heo nạc (220g) · Rau xào<br><span style="font-size:10px;color:var(--muted)">Legs T5: cơm 180g + thịt 230g + 1 trứng thêm</span></div><div class="macro-row"><span class="macro-pill mp-p">P 55g</span><span class="macro-pill mp-c">C 60g</span><span class="macro-pill mp-f">F 14g</span><span class="macro-pill mp-cal">590 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">13h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả sau tập</div><div class="meal-food">Ổi / Táo / Thanh long / Dưa hấu (150–200g)</div><div class="macro-row"><span class="macro-pill mp-c">C 15g</span><span class="macro-pill mp-fruit">Vitamin C cao</span><span class="macro-pill mp-cal">~70 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">15h30</div></div><div style="flex:1"><div class="meal-name">Bữa phụ chiều</div><div class="meal-food">Sữa chua không đường (1 hộp 100g)</div><div class="macro-row"><span class="macro-pill mp-p">P 5g</span><span class="macro-pill mp-c">C 8g</span><span class="macro-pill mp-cal">68 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">18h30</div></div><div style="flex:1"><div class="meal-name">Bữa tối</div><div class="meal-food">Cơm ít (120g) · Cá kho/hấp hoặc tôm luộc (200g) · Đậu phụ (100g) · Rau xanh nhiều</div><div class="macro-row"><span class="macro-pill mp-p">P 48g</span><span class="macro-pill mp-c">C 38g</span><span class="macro-pill mp-f">F 13g</span><span class="macro-pill mp-cal">465 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">19h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả tối — Đường thấp</div><div class="meal-food">Bưởi / Ổi / Thanh long (150g). Tránh xoài, nhãn, vải buổi tối.</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-fruit">Đường thấp</span><span class="macro-pill mp-cal">~60 kcal</span></div></div></div>
+    </div>
+    <div style="margin-top:12px;padding:11px 14px;background:var(--surface2);border-radius:9px;font-size:11px;color:var(--muted)">Tổng: <strong style="color:var(--text)">~1.730 kcal</strong> · P: <strong style="color:var(--accent)">~138g</strong> · C: <strong style="color:var(--accent2)">~193g</strong> · F: <strong style="color:var(--warn)">~42g</strong></div>
+  </div>
+  <div id="meal-cardio" style="display:none">
+    <div class="meal-list">
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">6h30</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">3 trứng luộc · 2 lát bánh mì đen (60g)</div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 11g</span><span class="macro-pill mp-cal">315 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa <span style="font-size:10px;color:var(--muted)">(không cần snack 11h)</span></div><div class="meal-food">Cơm ít (100g) · Ức gà / cá hấp (220g) · Rau xào / salad nhiều</div><div class="macro-row"><span class="macro-pill mp-p">P 50g</span><span class="macro-pill mp-c">C 40g</span><span class="macro-pill mp-f">F 12g</span><span class="macro-pill mp-cal">468 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả sau trưa</div><div class="meal-food">Ổi / Táo / Thanh long (150g)</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-cal">~65 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">15h30</div></div><div style="flex:1"><div class="meal-name">Bữa phụ chiều</div><div class="meal-food">Sữa chua không đường (1 hộp 100g)</div><div class="macro-row"><span class="macro-pill mp-p">P 5g</span><span class="macro-pill mp-c">C 8g</span><span class="macro-pill mp-cal">68 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">18h30</div></div><div style="flex:1"><div class="meal-name">Bữa tối (carb thấp)</div><div class="meal-food">Cơm rất ít (80g) · Cá / tôm / đậu phụ (200g) · Rau xanh 2 đĩa</div><div class="macro-row"><span class="macro-pill mp-p">P 45g</span><span class="macro-pill mp-c">C 28g</span><span class="macro-pill mp-f">F 12g</span><span class="macro-pill mp-cal">400 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">19h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả tối</div><div class="meal-food">Bưởi / Ổi (150g)</div><div class="macro-row"><span class="macro-pill mp-c">C 10g</span><span class="macro-pill mp-cal">~55 kcal</span></div></div></div>
+    </div>
+    <div style="margin-top:12px;padding:11px 14px;background:var(--surface2);border-radius:9px;font-size:11px;color:var(--muted)">Tổng: <strong style="color:var(--text)">~1.371 kcal</strong> · P: <strong style="color:var(--accent)">~122g</strong> · C: <strong style="color:var(--accent2)">~130g</strong> · F: <strong style="color:var(--warn)">~37g</strong></div>
+  </div>
+  <div id="meal-cn" style="display:none">
+    <div class="meal-list">
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">7h30</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">3 trứng luộc · 2 lát bánh mì đen (60g)</div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 11g</span><span class="macro-pill mp-cal">315 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa</div><div class="meal-food">Cơm gạo lứt (100g) · Cá / tôm (200g) · Rau xào / luộc nhiều</div><div class="macro-row"><span class="macro-pill mp-p">P 48g</span><span class="macro-pill mp-c">C 35g</span><span class="macro-pill mp-f">F 13g</span><span class="macro-pill mp-cal">449 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">15h</div></div><div style="flex:1"><div class="meal-name">Bữa phụ chiều</div><div class="meal-food">Sữa chua không đường (100g)</div><div class="macro-row"><span class="macro-pill mp-p">P 5g</span><span class="macro-pill mp-c">C 8g</span><span class="macro-pill mp-cal">68 kcal</span></div></div></div>
+      <div class="meal-item" style="border:1px solid rgba(245,158,11,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--warn)">18h30</div></div><div style="flex:1"><div class="meal-name">Bữa tối — Refeed nhẹ ★</div><div class="meal-food">Cơm nhiều hơn (150g) · Thức ăn gia đình chọn món nạc · Rau xanh<br><span style="font-size:10px;color:var(--muted)">Reset leptin sau tuần deficit. Không phải cheat meal tự do.</span></div><div class="macro-row"><span class="macro-pill mp-p">P 42g</span><span class="macro-pill mp-c">C 55g</span><span class="macro-pill mp-f">F 14g</span><span class="macro-pill mp-cal">514 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">19h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả tối</div><div class="meal-food">Bưởi / Ổi (150g)</div><div class="macro-row"><span class="macro-pill mp-c">C 10g</span><span class="macro-pill mp-cal">~60 kcal</span></div></div></div>
+    </div>
+    <div style="margin-top:12px;padding:11px 14px;background:var(--surface2);border-radius:9px;font-size:11px;color:var(--muted)">Tổng: <strong style="color:var(--text)">~1.406 kcal</strong> · P: <strong style="color:var(--accent)">~117g</strong> · C: <strong style="color:var(--accent2)">~140g</strong> · F: <strong style="color:var(--warn)">~38g</strong></div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="page" id="page-progress">
+  <div class="hero"><div class="hero-label">Theo dõi</div><div class="hero-title">Tiến độ & Checklist</div><div class="hero-sub">Tick vào các mục đã hoàn thành trong ngày</div></div>
+  <div class="section-title">Checklist hôm nay</div>
+  <div class="checklist">
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn sáng đủ — 3 trứng + 2 lát bánh mì đen</div><div class="check-meta">6h30 · ~315 kcal</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn snack trước tập lúc 11h</div><div class="check-meta">Khoai lang + sữa chua · ~162 kcal</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Hoàn thành buổi tập 12h–13h</div><div class="check-meta">Tất cả sets theo lịch</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn bữa trưa sau tập trước 14h</div><div class="check-meta">Cơm + thịt nhiều + rau · ~590 kcal</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Uống đủ nước — ít nhất 2.5L</div><div class="check-meta">Ngày tập cần nhiều hơn</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn sữa chua chiều 15h30</div><div class="check-meta">1 hộp 100g · ~68 kcal</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Bữa tối kiểm soát khẩu phần</div><div class="check-meta">Cơm ít + protein + rau nhiều</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Đi bộ 30 phút lúc 19h30</div><div class="check-meta">Sau bữa tối 45–60 phút</div></div></div>
+  </div>
+  <div class="section-title">Nhập cân nặng</div>
+  <div class="progress-wrap">
+    <div style="display:flex;gap:10px;align-items:center;margin-bottom:14px">
+      <input type="number" id="weight-input" placeholder="VD: 77.5" step="0.1" min="50" max="150" style="background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:9px 14px;color:var(--text);font-size:14px;width:130px;outline:none;font-family:'DM Sans',sans-serif">
+      <button onclick="logWeight()" style="background:var(--accent);color:#fff;border:none;border-radius:9px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif">Lưu</button>
+      <button onclick="clearWeights()" style="background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:9px;padding:9px 14px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif">Xóa</button>
+    </div>
+    <div id="weight-history" style="font-size:12px;color:var(--muted)">Chưa có dữ liệu. Cân mỗi sáng thứ 2 sau khi ngủ dậy.</div>
+  </div>
+  <div class="section-title">Nguyên tắc theo dõi</div>
+  <div class="note-card"><div class="note-title">Cân đúng cách</div><div class="note-text">Cân mỗi sáng sau ngủ dậy, trước khi ăn. Lấy trung bình cả tuần, không xem từng ngày.</div></div>
+  <div class="note-card"><div class="note-title">Khi không giảm 3 tuần liên tiếp</div><div class="note-text">Cắt thêm 100–150 kcal/ngày HOẶC thêm 1 buổi cardio. Không cần thay đổi toàn bộ kế hoạch.</div></div>
+  <div class="note-card"><div class="note-title">Đừng chỉ nhìn vào cân</div><div class="note-text">Chụp ảnh so sánh mỗi 4 tuần. Đo vòng eo song song với cân nặng.</div></div>
+</div>
+
+<script>
+function showPage(id,el){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('nav .nav-tab').forEach(t=>t.classList.remove('active'));document.getElementById('page-'+id).classList.add('active');el.classList.add('active')}
+function selectDay(id,el){document.querySelectorAll('.day-card').forEach(d=>d.classList.remove('selected'));document.querySelectorAll('[id^="workout-"]').forEach(p=>p.style.display='none');el.classList.add('selected');document.getElementById('workout-'+id).style.display='block'}
+function selectMeal(id,el){document.querySelectorAll('#page-meal .nav-tab').forEach(t=>t.classList.remove('active'));['tap','cardio','cn'].forEach(k=>{const el=document.getElementById('meal-'+k);if(el)el.style.display='none'});el.classList.add('active');document.getElementById('meal-'+id).style.display='block'}
+function toggleVideo(id,btn){const embed=document.getElementById(id);const isOpen=embed.classList.contains('open');document.querySelectorAll('.video-embed.open').forEach(e=>e.classList.remove('open'));if(!isOpen)embed.classList.add('open')}
+function closeVideo(id){document.getElementById(id).classList.remove('open')}
+function toggleCheck(el){el.classList.toggle('done');saveChecklist()}
+function saveChecklist(){const items=[...document.querySelectorAll('.check-item')].map(el=>el.classList.contains('done'));localStorage.setItem('gymCheck_'+today(),JSON.stringify(items))}
+function loadChecklist(){const saved=localStorage.getItem('gymCheck_'+today());if(!saved)return;JSON.parse(saved).forEach((v,i)=>{const els=document.querySelectorAll('.check-item');if(els[i]&&v)els[i].classList.add('done')})}
+function today(){return new Date().toISOString().split('T')[0]}
+function logWeight(){const val=parseFloat(document.getElementById('weight-input').value);if(!val||val<50||val>150)return;const data=JSON.parse(localStorage.getItem('gymWeights')||'[]');data.push({date:today(),weight:val});localStorage.setItem('gymWeights',JSON.stringify(data));document.getElementById('weight-input').value='';renderWeights()}
+function clearWeights(){if(confirm('Xóa toàn bộ dữ liệu cân nặng?')){localStorage.removeItem('gymWeights');renderWeights()}}
+function renderWeights(){const data=JSON.parse(localStorage.getItem('gymWeights')||'[]');const el=document.getElementById('weight-history');if(!data.length){el.textContent='Chưa có dữ liệu. Cân mỗi sáng thứ 2 sau khi ngủ dậy.';return}const latest=data[data.length-1];const pct=Math.max(0,Math.min(100,((78-latest.weight)/(78-67))*100));el.innerHTML=`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px"><span style="color:var(--muted)">Tiến độ</span><span style="color:var(--accent2)">${pct.toFixed(1)}% — còn ${Math.max(0,latest.weight-67).toFixed(1)} kg nữa</span></div><div style="height:5px;background:var(--border);border-radius:3px;overflow:hidden"><div style="height:100%;width:${pct}%;background:var(--accent2);border-radius:3px"></div></div></div>`+data.slice(-7).reverse().map(d=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);font-size:11px"><span style="color:var(--muted)">${d.date}</span><strong style="color:var(--accent2)">${d.weight} kg</strong><span style="color:${d.weight<78?'var(--accent2)':'var(--muted)'}">${d.weight<78?'▼ '+(78-d.weight).toFixed(1)+' kg':'—'}</span></div>`).join('')}
+loadChecklist();renderWeights();
+</script>
+</body>
+</html>
