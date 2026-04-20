@@ -164,17 +164,17 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
   <div class="section-title">Chọn ngày</div>
   <div class="week-grid">
     <div class="day-card selected" onclick="selectDay('t2',this)"><div class="day-name">THỨ 2</div><div class="day-type type-push">PUSH</div><div class="day-muscle">Ngực · Vai · Tricep</div></div>
-    <div class="day-card" onclick="selectDay('t3',this)"><div class="day-name">THỨ 3</div><div class="day-type type-pull">PULL</div><div class="day-muscle">Lưng · Bicep</div></div>
-    <div class="day-card" onclick="selectDay('t4',this)"><div class="day-name">THỨ 4</div><div class="day-type type-cardio">CARDIO</div><div class="day-muscle">HIIT · Core</div></div>
+    <div class="day-card" onclick="selectDay('t3',this)"><div class="day-name">THỨ 3</div><div class="day-type type-cardio">BƠI+PB</div><div class="day-muscle">Bơi trưa · Pickleball tối</div></div>
+    <div class="day-card" onclick="selectDay('t4',this)"><div class="day-name">THỨ 4</div><div class="day-type type-pull">PULL</div><div class="day-muscle">Lưng · Bicep</div></div>
     <div class="day-card" onclick="selectDay('t5',this)"><div class="day-name">THỨ 5</div><div class="day-type type-legs">LEGS</div><div class="day-muscle">Quad · Ham · Mông</div></div>
-    <div class="day-card" onclick="selectDay('t6',this)"><div class="day-name">THỨ 6</div><div class="day-type type-upper">UPPER</div><div class="day-muscle">Thân trên</div></div>
-    <div class="day-card" onclick="selectDay('t7',this)"><div class="day-name">THỨ 7</div><div class="day-type type-cheat">NGHỈ</div><div class="day-muscle">Cheat meal</div></div>
-    <div class="day-card" onclick="selectDay('cn',this)"><div class="day-name">CN</div><div class="day-type type-rest">NGHỈ</div><div class="day-muscle">Hồi phục</div></div>
+    <div class="day-card" onclick="selectDay('t6',this)"><div class="day-name">THỨ 6</div><div class="day-type type-cardio">BƠI+PB</div><div class="day-muscle">Bơi trưa · Pickleball tối</div></div>
+    <div class="day-card" onclick="selectDay('t7',this)"><div class="day-name">THỨ 7</div><div class="day-type type-upper">UPPER</div><div class="day-muscle">Thân trên + Core · 14h</div></div>
+    <div class="day-card" onclick="selectDay('cn',this)"><div class="day-name">CN</div><div class="day-type type-rest">NGHỈ</div><div class="day-muscle">Nghỉ + Refeed tối</div></div>
   </div>
 
   <!-- T2 PUSH -->
   <div class="detail-panel" id="workout-t2">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(79,142,247,.15);color:var(--accent)">PUSH</span><div><div class="detail-title">Thứ 2 — Ngực · Vai · Tricep</div><div class="detail-sub">12h–12h45 · 7 bài · 22 sets</div></div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(79,142,247,.15);color:var(--accent)">PUSH</span><div><div class="detail-title">Thứ 2 — Ngực · Vai · Tricep</div><div class="detail-sub">17h30–19h · 7 bài · 22 sets</div></div></div>
     <div class="warmup-note">Khởi động 5': xoay khớp vai · xoay cổ tay · 10 push-up chậm · 1 set bench nhẹ 50% tạ</div>
     <div class="ex-list">
       <div class="ex-row">
@@ -280,7 +280,15 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
 
   <!-- T3 PULL -->
   <div class="detail-panel" id="workout-t3" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(52,211,153,.15);color:var(--accent2)">PULL</span><div><div class="detail-title">Thứ 3 — Lưng · Bicep</div><div class="detail-sub">12h–12h45 · 6 bài · 20 sets</div></div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">BƠI + PB</span><div><div class="detail-title">Thứ 3 — Bơi trưa · Pickleball tối</div><div class="detail-sub">Không tập gym · Nghỉ tạ hoàn toàn</div></div></div>
+    <div class="note-card"><div class="note-title">Bơi buổi trưa</div><div class="note-text">Bơi 30–45 phút · Tương đương 1 buổi LISS cardio · Ăn đủ bữa trưa sau bơi để có năng lượng cho tối.</div></div>
+    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Pickleball buổi tối</div><div class="note-text">Ăn snack nhẹ trước khi chơi khoảng 1 tiếng · Chuối hoặc bánh mì + sữa chua · Uống đủ nước · Không cần đi bộ tối nay.</div></div>
+    <div class="note-card"><div class="note-title">Lưu ý dinh dưỡng ngày này</div><div class="note-text">Ngày tải cao — bổ sung carb đủ để duy trì năng lượng cả ngày. Bữa tối sau pickleball ăn đủ protein để hồi phục cho thứ 4 tập Pull.</div></div>
+  </div>
+
+  <!-- T4 PULL -->
+  <div class="detail-panel" id="workout-t4" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(52,211,153,.15);color:var(--accent2)">PULL</span><div><div class="detail-title">Thứ 4 — Lưng · Bicep</div><div class="detail-sub">17h30–19h · 6 bài · 20 sets</div></div></div>
     <div class="warmup-note">Khởi động 5': xoay khớp vai · 10 dead hang trên xà · 1 set lat pulldown nhẹ</div>
     <div class="ex-list">
       <div class="ex-row">
@@ -310,33 +318,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     </div>
   </div>
 
-  <!-- T4 CARDIO -->
-  <div class="detail-panel" id="workout-t4" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">CARDIO</span><div><div class="detail-title">Thứ 4 — HIIT + Core</div><div class="detail-sub">12h–12h40 · ~40 phút · Không tập tạ</div></div></div>
-    <div class="warmup-note">Khởi động 3': đi bộ máy 5–6 km/h trước khi vào HIIT</div>
-    <div class="ex-list">
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Chạy máy / Xe đạp HIIT</div><div class="ex-note">40s cường độ cao (9–11 km/h) + 20s đi chậm. Nhịp tim 150–160 bpm. Lặp 8 vòng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">8 vòng</span><span class="meta-tag">40s + 20s</span><span class="meta-tag">~25 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-hiit',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-hiit"><div class="video-close"><span>HIIT Treadmill</span><button onclick="closeVideo('v-hiit')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ml6cT4AZdqI" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Plank</div><div class="ex-note">Thân thẳng từ đầu đến gót. Không để hông võng. Thở đều.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">3 sets</span><span class="meta-tag">30–45s</span><span class="meta-tag">Nghỉ 30s</span></div></div><a class="video-btn" onclick="toggleVideo('v-plank',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-plank"><div class="video-close"><span>Plank — Kỹ thuật đúng</span><button onclick="closeVideo('v-plank')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ASdvN_XEl_c" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Hanging knee raise (treo xà gập gối)</div><div class="ex-note">Gập gối lên ngực chậm. Không đánh lắc. Dùng captain's chair nếu chưa treo được lâu.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-kneeraise',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-kneeraise"><div class="video-close"><span>Hanging Knee Raise</span><button onclick="closeVideo('v-kneeraise')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/p9hhX_Sx5v0" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Cable crunch (gập bụng cáp)</div><div class="ex-note">Quỳ gối, cáp từ trên cao, gập người xuống siết bụng. Không kéo bằng cánh tay.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(45,212,191,.15);color:var(--teal)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-cablecrunch',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-cablecrunch"><div class="video-close"><span>Cable Crunch</span><button onclick="closeVideo('v-cablecrunch')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2fbujeH3F0E" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-    </div>
-  </div>
-
   <!-- T5 LEGS -->
   <div class="detail-panel" id="workout-t5" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(245,158,11,.15);color:var(--warn)">LEGS</span><div><div class="detail-title">Thứ 5 — Quad · Hamstring · Mông · Bắp chân</div><div class="detail-sub">12h–12h45 · 6 bài · 20 sets</div></div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(245,158,11,.15);color:var(--warn)">LEGS</span><div><div class="detail-title">Thứ 5 — Quad · Hamstring · Mông · Bắp chân</div><div class="detail-sub">17h30–19h · 6 bài · 20 sets</div></div></div>
     <div class="warmup-note">Khởi động 5': xoay hông · squat không tạ 15 reps · lunge chỗ 10 reps mỗi chân</div>
     <div class="ex-list">
       <div class="ex-row">
@@ -366,9 +350,17 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     </div>
   </div>
 
-  <!-- T6 UPPER -->
+  <!-- T6 BƠI + PICKLEBALL -->
   <div class="detail-panel" id="workout-t6" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(167,139,250,.15);color:var(--purple)">UPPER</span><div><div class="detail-title">Thứ 6 — Thân trên tổng hợp + Core</div><div class="detail-sub">12h–12h42 · 6 bài · 18 sets</div></div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">BƠI + PB</span><div><div class="detail-title">Thứ 6 — Bơi trưa · Pickleball tối</div><div class="detail-sub">Không tập gym · Nghỉ tạ hoàn toàn</div></div></div>
+    <div class="note-card"><div class="note-title">Bơi buổi trưa</div><div class="note-text">Bơi 30–45 phút · Ăn đủ bữa trưa sau bơi · Nghỉ ngơi buổi chiều trước pickleball tối.</div></div>
+    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Pickleball buổi tối</div><div class="note-text">Ăn snack nhẹ trước 1 tiếng · Uống đủ nước · Không đi bộ tối nay · Ngủ sớm để hồi phục cho thứ 7.</div></div>
+    <div class="note-card"><div class="note-title">Lưu ý quan trọng</div><div class="note-text">Thứ 6 là ngày nghỉ gym — cơ thể hồi phục sau 3 buổi tạ liên tiếp T2/T4/T5 và nạp năng lượng trước buổi Upper thứ 7.</div></div>
+  </div>
+
+  <!-- T7 UPPER + CORE -->
+  <div class="detail-panel" id="workout-t7" style="display:none">
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(167,139,250,.15);color:var(--purple)">UPPER</span><div><div class="detail-title">Thứ 7 — Thân trên tổng hợp + Core</div><div class="detail-sub">14h–15h30 · 6 bài · 18 sets · Cheat meal tối</div></div></div>
     <div class="warmup-note">Khởi động 5': band pull-apart · xoay khớp vai · 10 push-up · 1 set row nhẹ</div>
     <div class="ex-list">
       <div class="ex-row">
@@ -388,7 +380,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
         <div class="video-embed" id="v-lateral2"><div class="video-close"><span>Lateral Raise</span><button onclick="closeVideo('v-lateral2')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" allowfullscreen loading="lazy"></iframe></div></div>
       </div>
       <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Superset: Bicep curl + Tricep pushdown</div><div class="ex-note">Làm bicep xong chuyển ngay sang tricep không nghỉ. Nghỉ 60s sau superset. Tiết kiệm ~10 phút.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">12 reps mỗi bài</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-superset',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
+        <div class="ex-main"><div class="ex-info"><div class="ex-name">Superset: Bicep curl + Tricep pushdown</div><div class="ex-note">Làm bicep xong chuyển ngay sang tricep không nghỉ. Nghỉ 60s sau superset.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">12 reps mỗi bài</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-superset',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
         <div class="video-embed" id="v-superset"><div class="video-close"><span>Bicep Curl</span><button onclick="closeVideo('v-superset')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div>
       </div>
       <div class="ex-row">
@@ -396,17 +388,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
         <div class="video-embed" id="v-sideplank"><div class="video-close"><span>Side Plank</span><button onclick="closeVideo('v-sideplank')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_rdfjFSFKMY" allowfullscreen loading="lazy"></iframe></div></div>
       </div>
     </div>
+    <div class="note-card" style="background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15);margin-top:14px"><div class="note-title" style="color:var(--danger)">Cheat meal tối thứ 7</div><div class="note-text">Thoải mái nhưng dừng ở 80% no · Ưu tiên protein · Hạn chế bia rượu · Không đi bộ tối nay</div></div>
   </div>
 
-  <!-- T7 / CN -->
-  <div class="detail-panel" id="workout-t7" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(248,113,113,.12);color:var(--danger)">NGHỈ</span><div><div class="detail-title">Thứ 7 — Nghỉ chủ động</div><div class="detail-sub">Không tập tạ · Không HIIT</div></div></div>
-    <div class="note-card"><div class="note-title">Hoạt động cho phép</div><div class="note-text">Đi bộ nhẹ 20–30 phút buổi sáng · Giãn cơ 10–15 phút · Foam rolling</div></div>
-    <div class="note-card" style="background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15)"><div class="note-title" style="color:var(--danger)">Cheat meal tối</div><div class="note-text">Thoải mái nhưng dừng ở 80% no · Ưu tiên protein · Hạn chế bia rượu · Không đi bộ tối nay</div></div>
-  </div>
   <div class="detail-panel" id="workout-cn" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(107,114,128,.1);color:var(--muted)">NGHỈ</span><div><div class="detail-title">Chủ nhật — Nghỉ hoàn toàn</div><div class="detail-sub">Cơ phát triển trong lúc nghỉ</div></div></div>
-    <div class="note-card"><div class="note-title">Ghi nhớ</div><div class="note-text">Sau cheat meal nặng bụng: uống nhiều nước, đi bộ nhẹ 20 phút sáng · Chuẩn bị tinh thần cho tuần mới</div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(107,114,128,.1);color:var(--muted)">NGHỈ</span><div><div class="detail-title">Chủ nhật — Nghỉ hoàn toàn</div><div class="detail-sub">Cơ phát triển trong lúc nghỉ · Refeed tối</div></div></div>
+    <div class="note-card"><div class="note-title">Nghỉ ngơi & hồi phục</div><div class="note-text">Sau cheat meal nặng bụng: uống nhiều nước, đi bộ nhẹ 20 phút sáng sớm · Chuẩn bị tinh thần cho tuần mới từ thứ 2.</div></div>
+    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Refeed tối chủ nhật</div><div class="note-text">Ăn cơm nhiều hơn bình thường · Chọn món nạc · Reset leptin trước tuần tập mới. Không phải cheat meal tự do.</div></div>
   </div>
 </div>
 
