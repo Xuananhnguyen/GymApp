@@ -186,18 +186,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
   </div>
   <div class="section-title">Chọn ngày</div>
   <div class="week-grid">
-    <div class="day-card selected" onclick="selectDay('t2',this)"><div class="day-name">THỨ 2</div><div class="day-type type-push">PUSH</div><div class="day-muscle">Ngực · Vai · Tricep</div></div>
-    <div class="day-card" onclick="selectDay('t3',this)"><div class="day-name">THỨ 3</div><div class="day-type type-cardio">BƠI+PB</div><div class="day-muscle">Bơi trưa · Pickleball tối</div></div>
-    <div class="day-card" onclick="selectDay('t4',this)"><div class="day-name">THỨ 4</div><div class="day-type type-legs">LEGS</div><div class="day-muscle">Quad · Ham · Mông</div></div>
-    <div class="day-card" onclick="selectDay('t5',this)"><div class="day-name">THỨ 5</div><div class="day-type type-pull">PULL</div><div class="day-muscle">Bơi sáng · Lưng · Bicep</div></div>
-    <div class="day-card" onclick="selectDay('t6',this)"><div class="day-name">THỨ 6</div><div class="day-type type-cardio">BƠI+PB</div><div class="day-muscle">Bơi trưa · Pickleball tối</div></div>
-    <div class="day-card" onclick="selectDay('t7',this)"><div class="day-name">THỨ 7</div><div class="day-type type-upper">UPPER</div><div class="day-muscle">Thân trên + Core · 14h</div></div>
-    <div class="day-card" onclick="selectDay('cn',this)"><div class="day-name">CN</div><div class="day-type type-rest">NGHỈ</div><div class="day-muscle">Nghỉ + Refeed tối</div></div>
+    <div class="day-card selected" onclick="selectDay('t2',this)"><div class="day-name">THỨ 2</div><div class="day-type type-push">PUSH</div><div class="day-muscle">Cardio 5h45 · Gym 12h</div></div>
+    <div class="day-card" onclick="selectDay('t3',this)"><div class="day-name">THỨ 3</div><div class="day-type type-cardio">BƠI</div><div class="day-muscle">Bơi sáng 6h30</div></div>
+    <div class="day-card" onclick="selectDay('t4',this)"><div class="day-name">THỨ 4</div><div class="day-type type-legs">LEGS</div><div class="day-muscle">Cardio 5h45 · Gym 12h</div></div>
+    <div class="day-card" onclick="selectDay('t5',this)"><div class="day-name">THỨ 5</div><div class="day-type type-pull">PULL</div><div class="day-muscle">Cardio 5h45 · Gym 12h</div></div>
+    <div class="day-card" onclick="selectDay('t6',this)"><div class="day-name">THỨ 6</div><div class="day-type type-cardio">BƠI</div><div class="day-muscle">Bơi sáng 6h30</div></div>
+    <div class="day-card" onclick="selectDay('t7',this)"><div class="day-name">THỨ 7</div><div class="day-type type-upper">UPPER</div><div class="day-muscle">Gym sáng 7h30</div></div>
+    <div class="day-card" onclick="selectDay('cn',this)"><div class="day-name">CN</div><div class="day-type type-rest">FULL BODY</div><div class="day-muscle">TA 8h · Gym 10h</div></div>
   </div>
 
   <!-- T2 PUSH -->
   <div class="detail-panel" id="workout-t2">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(79,142,247,.15);color:var(--accent)">PUSH</span><div><div class="detail-title">Thứ 2 — Ngực · Vai · Tricep</div><div class="detail-sub">17h30–19h · 7 bài · 22 sets</div></div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(79,142,247,.15);color:var(--accent)">PUSH</span><div><div class="detail-title">Thứ 2 — Ngực · Vai · Tricep</div><div class="detail-sub">Cardio 5h45–6h30 · Học TA cty 7h30–8h30 · Gym 12h–13h</div></div></div>
     <div class="warmup-note">Khởi động 5': xoay khớp vai · xoay cổ tay · 10 push-up chậm · 1 set bench nhẹ 50% tạ</div>
     <div class="ex-list">
       <div class="ex-row">
@@ -301,124 +301,78 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     </div>
   </div>
 
-  <!-- T3 PULL -->
+  <!-- T3 BƠI + CARDIO -->
   <div class="detail-panel" id="workout-t3" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">BƠI + PB</span><div><div class="detail-title">Thứ 3 — Bơi sáng · Pickleball tối</div><div class="detail-sub">Học bơi sáng sớm · Không tập gym · Pickleball tối</div></div></div>
-    <div class="note-card"><div class="note-title">Bơi buổi sáng sớm</div><div class="note-text">Học bơi sáng sớm · Ăn sáng đủ trước khi bơi · Nghỉ ngơi buổi trưa và chiều để nạp năng lượng cho pickleball tối.</div></div>
-    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Pickleball buổi tối</div><div class="note-text">Ăn snack nhẹ trước 1 tiếng · Uống đủ nước · Không đi bộ tối nay · Ngủ sớm để hồi phục cho thứ 4.</div></div>
-    <div class="note-card"><div class="note-title">Lưu ý dinh dưỡng</div><div class="note-text">Ngày tải cao — bổ sung carb đủ để duy trì năng lượng cả ngày. Bữa tối sau pickleball ăn đủ protein để hồi phục cho thứ 4 tập Legs.</div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">BƠI</span><div><div class="detail-title">Thứ 3 — Bơi sáng</div><div class="detail-sub">Dậy 5h30 · Bơi 6h30–7h30 · Đến cty 8h · Học LP tối 20h–22h30</div></div></div>
+    <div class="note-card"><div class="note-title">Bơi sáng 6h30</div><div class="note-text">Dậy 5h30 nấu cơm hộp · Chuẩn bị đồ bơi · Bơi 1 tiếng · Tắm rửa · Đến công ty 8h · Ăn sáng 2 trứng + bánh mì sau khi tắm.</div></div>
+    <div class="note-card"><div class="note-title">Không học sáng tại cty</div><div class="note-text">T3 không có khung học sáng — đến cty lúc 8h vào làm luôn lúc 8h30. Bù bằng học lập trình tối 20h–22h30.</div></div>
+    <div class="note-card" style="background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2)"><div class="note-title" style="color:var(--accent2)">Dinh dưỡng ngày này</div><div class="note-text">Bơi 1 tiếng tiêu hao nhiều — ăn đủ bữa trưa cơm hộp. Protein trưa 210g thịt/cá. Nghỉ trưa 20–25 phút.</div></div>
   </div>
 
-  <!-- T4 PULL -->
   <!-- T4 LEGS -->
   <div class="detail-panel" id="workout-t4" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(245,158,11,.15);color:var(--warn)">LEGS</span><div><div class="detail-title">Thứ 4 — Quad · Hamstring · Mông · Bắp chân</div><div class="detail-sub">17h30–19h · 6 bài · 20 sets</div></div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(245,158,11,.15);color:var(--warn)">LEGS</span><div><div class="detail-title">Thứ 4 — Quad · Hamstring · Mông · Bắp chân</div><div class="detail-sub">Cardio 5h45–6h30 · Học TA cty 7h30–8h30 · Gym 12h–13h</div></div></div>
     <div class="warmup-note">Khởi động 5': xoay hông · squat không tạ 15 reps · lunge chỗ 10 reps mỗi chân</div>
     <div class="ex-list">
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell squat (squat tạ đòn)</div><div class="ex-note">Ngồi sâu đến đùi song song sàn. Lưng thẳng. Bài quan trọng nhất — ưu tiên kỹ thuật trước tạ nặng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">4 sets</span><span class="meta-tag">6–8 reps</span><span class="meta-tag">Nghỉ 2 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-squat',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-squat"><div class="video-close"><span>Barbell Squat — Kỹ thuật chuẩn</span><button onclick="closeVideo('v-squat')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ultWZbUMPL8" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Leg press (máy đẩy chân)</div><div class="ex-note">Chân giữa bàn đạp. Không khóa gối hoàn toàn. Hạ chậm 3s.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legpress',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-legpress"><div class="video-close"><span>Leg Press</span><button onclick="closeVideo('v-legpress')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/IZxyjW7MPJQ" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Leg extension (máy duỗi chân)</div><div class="ex-note">Siết chặt quad ở điểm duỗi thẳng. Không cần tạ quá nặng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legext',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-legext"><div class="video-close"><span>Leg Extension</span><button onclick="closeVideo('v-legext')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/YyvSfVjQeL0" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Romanian deadlift — RDL</div><div class="ex-note">Hông đẩy ra sau, lưng thẳng, hạ tạ đến cảm giác căng đùi sau. Không hạ xuống sàn.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-rdl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-rdl"><div class="video-close"><span>Romanian Deadlift — RDL</span><button onclick="closeVideo('v-rdl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2SHsk9AzdjA" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Leg curl (máy cuộn đùi sau)</div><div class="ex-note">Cuộn chậm, giữ 1s ở điểm co, hạ chậm.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legcurl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-legcurl"><div class="video-close"><span>Leg Curl</span><button onclick="closeVideo('v-legcurl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/1Tq3QdYUuHs" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Standing calf raise (kiễng gót)</div><div class="ex-note">Kiễng cao hết mức, giữ 1s, hạ thấp hết mức. Biên độ đầy đủ mới phát triển.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">4 sets</span><span class="meta-tag">15–20 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-calf',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-calf"><div class="video-close"><span>Standing Calf Raise</span><button onclick="closeVideo('v-calf')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/gwLzBJYoWlI" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell squat (squat tạ đòn)</div><div class="ex-note">Ngồi sâu đến đùi song song sàn. Lưng thẳng. Gối theo hướng ngón chân. Ưu tiên kỹ thuật trước tạ nặng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">4 sets</span><span class="meta-tag">6–8 reps</span><span class="meta-tag">Nghỉ 2 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-squat',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-squat"><div class="video-close"><span>Barbell Squat</span><button onclick="closeVideo('v-squat')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ultWZbUMPL8" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Leg press (máy đẩy chân)</div><div class="ex-note">Chân giữa bàn đạp, rộng ngang hông. Không khóa gối hoàn toàn. Hạ chậm 3s để tăng thời gian căng cơ.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legpress',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-legpress"><div class="video-close"><span>Leg Press</span><button onclick="closeVideo('v-legpress')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/IZxyjW7MPJQ" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Romanian deadlift — RDL</div><div class="ex-note">Hông đẩy ra sau, lưng thẳng, hạ tạ dọc theo chân đến cảm giác căng đùi sau. Không hạ xuống sàn.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-rdl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-rdl"><div class="video-close"><span>Romanian Deadlift</span><button onclick="closeVideo('v-rdl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2SHsk9AzdjA" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Leg curl (máy cuộn đùi sau)</div><div class="ex-note">Cuộn chậm, giữ 1s ở điểm co, hạ chậm. Không dùng đà. Tập cô lập hamstring.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legcurl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-legcurl"><div class="video-close"><span>Leg Curl</span><button onclick="closeVideo('v-legcurl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/1Tq3QdYUuHs" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Leg extension (máy duỗi chân)</div><div class="ex-note">Siết chặt quad ở điểm duỗi thẳng, giữ 1s. Không cần tạ quá nặng — cơ lực, không phải tạ nặng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">3 sets</span><span class="meta-tag">12–15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-legext',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-legext"><div class="video-close"><span>Leg Extension</span><button onclick="closeVideo('v-legext')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/YyvSfVjQeL0" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Standing calf raise (kiễng gót)</div><div class="ex-note">Kiễng cao hết mức, giữ 1s, hạ thấp hết mức. Đặt ngón chân lên bậc để tăng biên độ. Biên độ đầy đủ mới phát triển.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(245,158,11,.15);color:var(--warn)">4 sets</span><span class="meta-tag">15–20 reps</span><span class="meta-tag">Nghỉ 45s</span></div></div><a class="video-btn" onclick="toggleVideo('v-calf',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-calf"><div class="video-close"><span>Standing Calf Raise</span><button onclick="closeVideo('v-calf')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/gwLzBJYoWlI" allowfullscreen loading="lazy"></iframe></div></div></div>
     </div>
   </div>
 
   <!-- T5 PULL -->
   <div class="detail-panel" id="workout-t5" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(52,211,153,.15);color:var(--accent2)">PULL</span><div><div class="detail-title">Thứ 5 — Lưng · Bicep</div><div class="detail-sub">Bơi sáng sớm · Gym 17h30–19h · 6 bài · 20 sets</div></div></div>
-    <div class="warmup-note">Bơi sáng xong nghỉ ngơi đủ · Ăn trưa đủ protein · Khởi động gym: xoay khớp vai · 10 dead hang trên xà · 1 set lat pulldown nhẹ</div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(52,211,153,.15);color:var(--accent2)">PULL</span><div><div class="detail-title">Thứ 5 — Lưng · Bicep</div><div class="detail-sub">Cardio 5h45–6h30 · Học TA cty 7h30–8h30 · Gym 12h–13h</div></div></div>
+    <div class="warmup-note">Khởi động 5': xoay khớp vai · 10 dead hang trên xà · 1 set lat pulldown nhẹ 50% tạ</div>
     <div class="ex-list">
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Deadlift (kéo tạ đòn từ sàn)</div><div class="ex-note">Lưng thẳng suốt. Hông xuống, ngực lên, đẩy chân vào sàn. Không tròn lưng dưới.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">4 sets</span><span class="meta-tag">5–6 reps</span><span class="meta-tag">Nghỉ 2 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-deadlift',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-deadlift"><div class="video-close"><span>Deadlift — Kỹ thuật chuẩn</span><button onclick="closeVideo('v-deadlift')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/op9kVnSso6Q" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Lat pulldown (kéo xà xuống máy)</div><div class="ex-note">Kéo xuống ngực, ngả người ra sau nhẹ. Siết lưng ở điểm thấp nhất.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">4 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-latpull',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-latpull"><div class="video-close"><span>Lat Pulldown</span><button onclick="closeVideo('v-latpull')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/CAwf7n6Luuc" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Seated cable row (kéo cáp ngồi)</div><div class="ex-note">Kéo về rốn, khuỷu tay sát hông. Ngực ra trước khi kéo, không giật bằng lưng dưới.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-cablerow',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-cablerow"><div class="video-close"><span>Seated Cable Row</span><button onclick="closeVideo('v-cablerow')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/GZbfZ033f74" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Face pull (kéo cáp về mặt)</div><div class="ex-note">Cáp ngang tầm mắt. Kéo về hai bên tai, khuỷu tay cao ngang vai. Giúp cân bằng vai, sửa lưng còng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-facepull',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-facepull"><div class="video-close"><span>Face Pull</span><button onclick="closeVideo('v-facepull')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/rep-qVOkqgk" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell curl (cuộn tạ đòn)</div><div class="ex-note">Khuỷu tay cố định sát hông. Không đánh hông để giật tạ lên.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-bbcurl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-bbcurl"><div class="video-close"><span>Barbell Curl</span><button onclick="closeVideo('v-bbcurl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Hammer curl (tạ tay xoay dọc)</div><div class="ex-note">Tạ cầm dọc như cầm búa. Tập brachialis + brachioradialis — làm tay trông đầy hơn.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-hammer',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-hammer"><div class="video-close"><span>Hammer Curl</span><button onclick="closeVideo('v-hammer')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/zC3nLlEvin4" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Deadlift (kéo tạ đòn từ sàn)</div><div class="ex-note">Lưng thẳng suốt. Hông xuống, ngực lên, đẩy chân vào sàn. Tạ sát chân khi kéo. Không tròn lưng dưới.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">4 sets</span><span class="meta-tag">5–6 reps</span><span class="meta-tag">Nghỉ 2 phút</span></div></div><a class="video-btn" onclick="toggleVideo('v-deadlift',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-deadlift"><div class="video-close"><span>Deadlift</span><button onclick="closeVideo('v-deadlift')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/op9kVnSso6Q" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Lat pulldown (kéo xà xuống máy)</div><div class="ex-note">Kéo xuống ngực, ngả người ra sau nhẹ 15–20°. Siết lưng ở điểm thấp nhất, hạ chậm lên.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">4 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-latpull',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-latpull"><div class="video-close"><span>Lat Pulldown</span><button onclick="closeVideo('v-latpull')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/CAwf7n6Luuc" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Seated cable row (kéo cáp ngồi)</div><div class="ex-note">Kéo về rốn, khuỷu tay sát hông. Ngực ra trước khi kéo. Không giật bằng lưng dưới hay đánh lắc người.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-cablerow',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-cablerow"><div class="video-close"><span>Seated Cable Row</span><button onclick="closeVideo('v-cablerow')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/GZbfZ033f74" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Face pull (kéo cáp về mặt)</div><div class="ex-note">Cáp ngang tầm mắt. Kéo về hai bên tai, khuỷu tay cao ngang vai. Cân bằng vai, sửa lưng còng — không bỏ bài này.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-facepull',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-facepull"><div class="video-close"><span>Face Pull</span><button onclick="closeVideo('v-facepull')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/rep-qVOkqgk" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell curl (cuộn tạ đòn)</div><div class="ex-note">Khuỷu tay cố định sát hông. Cuộn lên siết bicep ở đỉnh. Không đánh hông để giật tạ lên.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-bbcurl',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-bbcurl"><div class="video-close"><span>Barbell Curl</span><button onclick="closeVideo('v-bbcurl')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Hammer curl (tạ tay xoay dọc)</div><div class="ex-note">Tạ cầm dọc như cầm búa. Tập brachialis + brachioradialis — làm cánh tay trông đầy và dày hơn khi nhìn từ bên.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(52,211,153,.15);color:var(--accent2)">3 sets</span><span class="meta-tag">12 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-hammer',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-hammer"><div class="video-close"><span>Hammer Curl</span><button onclick="closeVideo('v-hammer')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/zC3nLlEvin4" allowfullscreen loading="lazy"></iframe></div></div></div>
     </div>
   </div>
 
-  <!-- T6 BƠI + PICKLEBALL -->
+  <!-- T6 BƠI + CARDIO -->
   <div class="detail-panel" id="workout-t6" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">BƠI + PB</span><div><div class="detail-title">Thứ 6 — Bơi trưa · Pickleball tối</div><div class="detail-sub">Không tập gym · Nghỉ tạ hoàn toàn</div></div></div>
-    <div class="note-card"><div class="note-title">Bơi buổi trưa</div><div class="note-text">Bơi 30–45 phút · Ăn đủ bữa trưa sau bơi · Nghỉ ngơi buổi chiều trước pickleball tối.</div></div>
-    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Pickleball buổi tối</div><div class="note-text">Ăn snack nhẹ trước 1 tiếng · Uống đủ nước · Không đi bộ tối nay · Ngủ sớm để hồi phục cho thứ 7.</div></div>
-    <div class="note-card"><div class="note-title">Lưu ý quan trọng</div><div class="note-text">Thứ 6 là ngày nghỉ gym — cơ thể hồi phục sau 3 buổi tạ liên tiếp T2/T4/T5 và nạp năng lượng trước buổi Upper thứ 7.</div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(45,212,191,.15);color:var(--teal)">BƠI</span><div><div class="detail-title">Thứ 6 — Bơi sáng</div><div class="detail-sub">Dậy 5h30 · Bơi 6h30–7h30 · Đến cty 8h · Học LP tối 20h–22h30</div></div></div>
+    <div class="note-card"><div class="note-title">Bơi sáng 6h30</div><div class="note-text">Tương tự thứ 3 · Dậy 5h30 nấu cơm hộp · Bơi 1 tiếng · Tắm · Đến công ty 8h · Ăn sáng 2 trứng + bánh mì sau bơi.</div></div>
+    <div class="note-card"><div class="note-title">Không học sáng tại cty</div><div class="note-text">T6 không có khung học sáng — đến cty lúc 8h vào làm luôn. Bù bằng học lập trình tối 20h–22h30.</div></div>
+    <div class="note-card" style="background:rgba(52,211,153,.04);border-color:rgba(52,211,153,.2)"><div class="note-title" style="color:var(--accent2)">T6 — Cuối tuần chuẩn bị</div><div class="note-text">Không gym tạ → cơ thể nhẹ hơn → não tỉnh táo hơn để học tối. Nghỉ trưa đủ giấc để học hiệu quả 20h–22h30.</div></div>
   </div>
 
-  <!-- T7 UPPER + CORE -->
+  <!-- T7 UPPER -->
   <div class="detail-panel" id="workout-t7" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(167,139,250,.15);color:var(--purple)">UPPER</span><div><div class="detail-title">Thứ 7 — Thân trên tổng hợp + Core</div><div class="detail-sub">Bơi sáng sớm · Gym 14h–15h30 · Cheat meal tối</div></div></div>
-    <div class="warmup-note">Bơi sáng xong nghỉ ngơi · Ăn trưa đủ · Gym lúc 14h: band pull-apart · xoay khớp vai · 10 push-up · 1 set row nhẹ</div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(167,139,250,.15);color:var(--purple)">UPPER</span><div><div class="detail-title">Thứ 7 — Thân trên tổng hợp + Core</div><div class="detail-sub">7h30–9h sáng · 6 bài · Cardio tối 18h · Cheat meal tối</div></div></div>
+    <div class="warmup-note">Khởi động 5': band pull-apart · xoay khớp vai · 10 push-up chậm · 1 set row nhẹ</div>
     <div class="ex-list">
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Dumbbell bench press (tạ tay nằm đẩy)</div><div class="ex-note">Biên độ rộng hơn barbell, stretch ngực tốt hơn. Hạ sâu đến cảm giác căng ngực.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-dbbench',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-dbbench"><div class="video-close"><span>Dumbbell Bench Press</span><button onclick="closeVideo('v-dbbench')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/VmB1G1K7v94" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Chest-supported row (row ngực tựa ghế)</div><div class="ex-note">Nằm sấp trên ghế nghiêng, kéo tạ tay lên. Cô lập lưng giữa tốt hơn bent-over row.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-csrow',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-csrow"><div class="video-close"><span>Chest-Supported Row</span><button onclick="closeVideo('v-csrow')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/T3N-TO4reLQ" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Dumbbell shoulder press (đẩy vai ngồi)</div><div class="ex-note">Ngồi thẳng lưng. Tạ ngang tai, đẩy thẳng lên. Không nhún người để đẩy.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-dbshoulder',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-dbshoulder"><div class="video-close"><span>Dumbbell Shoulder Press</span><button onclick="closeVideo('v-dbshoulder')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/qEwKCR5JCog" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Lateral raise (nâng tạ ngang)</div><div class="ex-note">Lần 2 trong tuần — vai giữa cần volume cao. Tập nhẹ, siết cơ.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-lateral2',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-lateral2"><div class="video-close"><span>Lateral Raise</span><button onclick="closeVideo('v-lateral2')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Superset: Bicep curl + Tricep pushdown</div><div class="ex-note">Làm bicep xong chuyển ngay sang tricep không nghỉ. Nghỉ 60s sau superset.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">12 reps mỗi bài</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-superset',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-superset"><div class="video-close"><span>Bicep Curl</span><button onclick="closeVideo('v-superset')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
-      <div class="ex-row">
-        <div class="ex-main"><div class="ex-info"><div class="ex-name">Plank + Side plank</div><div class="ex-note">Plank 40s → side plank trái 20s → side plank phải 20s = 1 set. Không nghỉ giữa.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">40s + 20s mỗi bên</span><span class="meta-tag">Nghỉ 30s</span></div></div><a class="video-btn" onclick="toggleVideo('v-sideplank',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div>
-        <div class="video-embed" id="v-sideplank"><div class="video-close"><span>Side Plank</span><button onclick="closeVideo('v-sideplank')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_rdfjFSFKMY" allowfullscreen loading="lazy"></iframe></div></div>
-      </div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Dumbbell bench press (tạ tay nằm đẩy)</div><div class="ex-note">Biên độ rộng hơn barbell, stretch ngực tốt hơn. Hạ sâu đến cảm giác căng ngực. Tạ song song hoặc hơi xoay vào trong.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-dbbench',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-dbbench"><div class="video-close"><span>Dumbbell Bench Press</span><button onclick="closeVideo('v-dbbench')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/VmB1G1K7v94" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Chest-supported row (row ngực tựa ghế)</div><div class="ex-note">Nằm sấp trên ghế nghiêng 30–45°, kéo tạ tay lên. Cô lập lưng giữa hoàn toàn — không dùng momentum.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-csrow',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-csrow"><div class="video-close"><span>Chest-Supported Row</span><button onclick="closeVideo('v-csrow')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/T3N-TO4reLQ" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Dumbbell shoulder press (đẩy vai ngồi)</div><div class="ex-note">Ngồi thẳng lưng có tựa lưng. Tạ ngang tai, đẩy thẳng lên. Không nhún người để đẩy.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-dbshoulder',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-dbshoulder"><div class="video-close"><span>Dumbbell Shoulder Press</span><button onclick="closeVideo('v-dbshoulder')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/qEwKCR5JCog" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Lateral raise (nâng tạ ngang)</div><div class="ex-note">Nâng tạ ra hai bên đến ngang vai. Khuỷu tay hơi cong nhẹ. Hạ chậm để tăng hiệu quả. Tạ nhẹ — siết cơ là chính.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">15 reps</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-lateral2',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-lateral2"><div class="video-close"><span>Lateral Raise</span><button onclick="closeVideo('v-lateral2')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/3VcKaXpzqRo" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Superset: Bicep curl + Tricep pushdown</div><div class="ex-note">Làm bicep curl xong chuyển ngay sang tricep pushdown không nghỉ. Nghỉ 60s sau mỗi superset. Tiết kiệm ~10 phút.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">12 reps mỗi bài</span><span class="meta-tag">Nghỉ 60s</span></div></div><a class="video-btn" onclick="toggleVideo('v-superset',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-superset"><div class="video-close"><span>Bicep Curl</span><button onclick="closeVideo('v-superset')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/kwG2ipFRgfo" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Plank + Side plank</div><div class="ex-note">Plank 40s → side plank trái 20s → side plank phải 20s = 1 set. Không nghỉ giữa các phần. Hông không được võng hay nhô lên.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(167,139,250,.15);color:var(--purple)">3 sets</span><span class="meta-tag">40s + 20s mỗi bên</span><span class="meta-tag">Nghỉ 30s</span></div></div><a class="video-btn" onclick="toggleVideo('v-sideplank',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-sideplank"><div class="video-close"><span>Side Plank</span><button onclick="closeVideo('v-sideplank')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_rdfjFSFKMY" allowfullscreen loading="lazy"></iframe></div></div></div>
     </div>
-    <div class="note-card" style="background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15);margin-top:14px"><div class="note-title" style="color:var(--danger)">Cheat meal tối thứ 7</div><div class="note-text">Thoải mái nhưng dừng ở 80% no · Ưu tiên protein · Hạn chế bia rượu · Không đi bộ tối nay</div></div>
+    <div class="note-card" style="background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15);margin-top:14px"><div class="note-title" style="color:var(--danger)">Cheat meal tối thứ 7</div><div class="note-text">Thoải mái nhưng dừng ở 80% no · Ưu tiên protein · Hạn chế bia rượu</div></div>
   </div>
 
+  <!-- CN FULL BODY -->
   <div class="detail-panel" id="workout-cn" style="display:none">
-    <div class="detail-header"><span class="detail-badge" style="background:rgba(107,114,128,.1);color:var(--muted)">NGHỈ</span><div><div class="detail-title">Chủ nhật — Nghỉ hoàn toàn</div><div class="detail-sub">Cơ phát triển trong lúc nghỉ · Refeed tối</div></div></div>
-    <div class="note-card"><div class="note-title">Nghỉ ngơi & hồi phục</div><div class="note-text">Sau cheat meal nặng bụng: uống nhiều nước, đi bộ nhẹ 20 phút sáng sớm · Chuẩn bị tinh thần cho tuần mới từ thứ 2.</div></div>
-    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15)"><div class="note-title" style="color:var(--warn)">Refeed tối chủ nhật</div><div class="note-text">Ăn cơm nhiều hơn bình thường · Chọn món nạc · Reset leptin trước tuần tập mới. Không phải cheat meal tự do.</div></div>
+    <div class="detail-header"><span class="detail-badge" style="background:rgba(79,142,247,.15);color:var(--accent)">FULL BODY</span><div><div class="detail-title">Chủ nhật — Tổng hợp toàn thân</div><div class="detail-sub">10h–11h15 sáng · 6 bài · Cardio tối 18h</div></div></div>
+    <div class="warmup-note">Khởi động 7': xoay toàn thân · squat không tạ 10 reps · push-up 10 reps · dead hang 20s</div>
+    <div class="ex-list">
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Barbell squat (squat tạ đòn)</div><div class="ex-note">Nhẹ hơn ngày Legs T4 khoảng 10–15%. Tập kỹ thuật, không cần đẩy nặng vì đây là buổi tổng hợp cuối tuần.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">8–10 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-squat-fb',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-squat-fb"><div class="video-close"><span>Barbell Squat</span><button onclick="closeVideo('v-squat-fb')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ultWZbUMPL8" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Bench press (tạ đòn nằm đẩy)</div><div class="ex-note">Nhẹ hơn ngày Push T2 khoảng 10%. Volume thấp hơn — duy trì kích thích cơ ngực cuối tuần.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">8–10 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-bench-fb',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-bench-fb"><div class="video-close"><span>Bench Press</span><button onclick="closeVideo('v-bench-fb')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/rT7DgCr-3pg" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Romanian deadlift nhẹ</div><div class="ex-note">Dùng RDL thay Deadlift thường — nhẹ hơn, ít stress cột sống hơn. Tạ chỉ 60–70% so với ngày Pull T5.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">10 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-rdl-fb',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-rdl-fb"><div class="video-close"><span>Romanian Deadlift</span><button onclick="closeVideo('v-rdl-fb')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2SHsk9AzdjA" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">OHP — Overhead press (đẩy vai đứng)</div><div class="ex-note">Đứng, đẩy tạ đòn hoặc tạ tay thẳng lên đầu. Siết core suốt. Không ngả lưng ra sau để bù lực.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">8–10 reps</span><span class="meta-tag">Nghỉ 90s</span></div></div><a class="video-btn" onclick="toggleVideo('v-ohp-fb',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-ohp-fb"><div class="video-close"><span>Overhead Press</span><button onclick="closeVideo('v-ohp-fb')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2yjwXTZQDDI" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Lat pulldown (kéo xà xuống máy)</div><div class="ex-note">Kéo xuống ngực, siết lưng. Volume thấp hơn ngày Pull T5 — chỉ duy trì kích thích lưng.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">10–12 reps</span><span class="meta-tag">Nghỉ 75s</span></div></div><a class="video-btn" onclick="toggleVideo('v-latpull-fb',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-latpull-fb"><div class="video-close"><span>Lat Pulldown</span><button onclick="closeVideo('v-latpull-fb')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/CAwf7n6Luuc" allowfullscreen loading="lazy"></iframe></div></div></div>
+      <div class="ex-row"><div class="ex-main"><div class="ex-info"><div class="ex-name">Plank (hít đất trụ)</div><div class="ex-note">Thân thẳng từ đầu đến gót. Không để hông võng hay nhô lên. Thở đều. Kết thúc buổi bằng core nhẹ.</div><div class="ex-meta"><span class="set-pill" style="background:rgba(79,142,247,.15);color:var(--accent)">3 sets</span><span class="meta-tag">45–60s</span><span class="meta-tag">Nghỉ 30s</span></div></div><a class="video-btn" onclick="toggleVideo('v-plank-fb',this)" href="javascript:void(0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</a></div><div class="video-embed" id="v-plank-fb"><div class="video-close"><span>Plank</span><button onclick="closeVideo('v-plank-fb')">Đóng ✕</button></div><div class="video-wrap"><iframe src="https://www.youtube.com/embed/ASdvN_XEl_c" allowfullscreen loading="lazy"></iframe></div></div></div>
+    </div>
+    <div class="note-card" style="background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.15);margin-top:14px"><div class="note-title" style="color:var(--warn)">Refeed tối chủ nhật</div><div class="note-text">Ăn cơm nhiều hơn bình thường · Chọn món nạc · Reset leptin trước tuần mới · Không phải cheat meal tự do</div></div>
   </div>
 </div>
 
@@ -439,8 +393,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     <div style="font-size:11px;color:var(--muted);margin-bottom:12px;padding:8px 12px;background:var(--surface2);border-radius:8px">Áp dụng: <strong style="color:var(--text)">Thứ 2 (Push) · Thứ 4 (Legs)</strong> — Dậy 5h30 · Tiếng Anh sáng · Gym 18h</div>
     <div class="meal-list">
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">5h30</div></div><div style="flex:1"><div class="meal-name">Dậy · Học tiếng Anh trước</div><div class="meal-food">Uống 500ml nước ngay khi dậy · Học tiếng Anh 5h45–6h30</div><div class="macro-row"><span class="macro-pill mp-cal">Nước lọc 500ml</span></div></div></div>
-      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">6h30</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">3 trứng luộc / chiên ít dầu olive · 2 lát bánh mì đen (60g)<br><span style="font-size:10px;color:var(--muted)">Rau: 100g dưa leo / cà chua ăn kèm</span></div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 11g</span><span class="macro-pill mp-cal">315 kcal</span></div></div></div>
-      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa</div><div class="meal-food">Cơm (120g) · Ức gà / cá / thịt heo nạc (180g) · Rau xào hoặc luộc (150–200g)<br><span style="font-size:10px;color:var(--muted)">Rau gợi ý: rau muống, cải xanh, bông cải xanh, giá đỗ</span></div><div class="macro-row"><span class="macro-pill mp-p">P 45g</span><span class="macro-pill mp-c">C 50g</span><span class="macro-pill mp-f">F 10g</span><span class="macro-pill mp-cal">470 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">6h30</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">2 trứng luộc / chiên ít dầu olive · 2 lát bánh mì đen (60g)<br><span style="font-size:10px;color:var(--muted)">Rau: 100g dưa leo / cà chua ăn kèm</span></div><div class="macro-row"><span class="macro-pill mp-p">P 16g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 8g</span><span class="macro-pill mp-cal">240 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa</div><div class="meal-food">Cơm (120g) · Ức gà / cá / thịt heo nạc (180g) · Rau xào hoặc luộc (150–200g)<br><span style="font-size:10px;color:var(--muted)">Rau gợi ý: rau muống, cải xanh, bông cải xanh, giá đỗ</span></div><div class="macro-row"><span class="macro-pill mp-p">P 52g</span><span class="macro-pill mp-c">C 50g</span><span class="macro-pill mp-f">F 10g</span><span class="macro-pill mp-cal">490 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả sau trưa</div><div class="meal-food">Ổi / Táo / Thanh long (150g) · Ngủ trưa 20–25 phút sau đó</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-fruit">Vitamin C</span><span class="macro-pill mp-cal">~65 kcal</span></div></div></div>
       <div class="meal-item" style="border:1px solid rgba(79,142,247,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent)">16h30</div></div><div style="flex:1"><div class="meal-name">Snack trước tập <span style="font-size:10px;color:var(--danger);font-weight:600">— Bắt buộc</span></div><div class="meal-food">Khoai lang hấp (120g) · Sữa chua không đường (100g)<br><span style="font-size:10px;color:var(--muted)">Ăn trước khi rời công ty · Tập Legs T4: khoai lang 150g</span></div><div class="macro-row"><span class="macro-pill mp-p">P 8g</span><span class="macro-pill mp-c">C 28g</span><span class="macro-pill mp-f">F 2g</span><span class="macro-pill mp-cal">162 kcal</span></div></div></div>
       <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">18h–19h30</div></div><div style="flex:1"><div class="meal-name" style="color:var(--accent2)">Gym · Push hoặc Legs</div><div class="meal-food">Uống nước đủ trong khi tập · Không ăn trong buổi tập</div><div class="macro-row"><span class="macro-pill mp-cal">Nước lọc 500–700ml</span></div></div></div>
@@ -456,8 +410,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     <div class="meal-list">
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">5h00</div></div><div style="flex:1"><div class="meal-name">Dậy · Nấu cơm hộp trưa</div><div class="meal-food">Dậy 5h nấu cơm · Uống 300ml nước trước khi bơi</div><div class="macro-row"><span class="macro-pill mp-cal">Nước lọc 300ml</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">6h30</div></div><div style="flex:1"><div class="meal-name">Học bơi</div><div class="meal-food">Không ăn no trước bơi · Nếu đói có thể ăn 1 lát bánh mì hoặc 1 trứng luộc trước 30 phút</div><div class="macro-row"><span class="macro-pill mp-cal">Tùy chọn: ~80 kcal</span></div></div></div>
-      <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">7h50</div></div><div style="flex:1"><div class="meal-name">Bữa sáng — Sau bơi <span style="font-size:10px;color:var(--accent2);font-weight:600">★ Ăn nhiều hơn ngày thường</span></div><div class="meal-food">3 trứng luộc · 2 lát bánh mì đen · Thêm 1 hộp sữa chua không đường (100g)<br><span style="font-size:10px;color:var(--muted)">Ăn ngay sau khi tắm xong trước khi đến công ty</span></div><div class="macro-row"><span class="macro-pill mp-p">P 28g</span><span class="macro-pill mp-c">C 40g</span><span class="macro-pill mp-f">F 13g</span><span class="macro-pill mp-cal">388 kcal</span></div></div></div>
-      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa — Cơm hộp mang theo</div><div class="meal-food">Cơm (150g) · Ức gà / thịt heo nạc (200g) · Rau xào (150–200g)<br><span style="font-size:10px;color:var(--muted)">Nấu từ sáng sớm · Carb cao hơn ngày thường để có sức tập chiều</span></div><div class="macro-row"><span class="macro-pill mp-p">P 50g</span><span class="macro-pill mp-c">C 58g</span><span class="macro-pill mp-f">F 12g</span><span class="macro-pill mp-cal">544 kcal</span></div></div></div>
+      <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">7h50</div></div><div style="flex:1"><div class="meal-name">Bữa sáng — Sau bơi <span style="font-size:10px;color:var(--accent2);font-weight:600">★ Ăn nhiều hơn ngày thường</span></div><div class="meal-food">2 trứng luộc · 2 lát bánh mì đen · 1 hộp sữa chua không đường (100g)<br><span style="font-size:10px;color:var(--muted)">Ăn ngay sau khi tắm xong trước khi đến công ty</span></div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 40g</span><span class="macro-pill mp-f">F 10g</span><span class="macro-pill mp-cal">350 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa — Cơm hộp mang theo</div><div class="meal-food">Cơm (150g) · Ức gà / thịt heo nạc (200g) · Rau xào (150–200g)<br><span style="font-size:10px;color:var(--muted)">Nấu từ sáng sớm · Carb cao hơn ngày thường để có sức tập chiều</span></div><div class="macro-row"><span class="macro-pill mp-p">P 52g</span><span class="macro-pill mp-c">C 58g</span><span class="macro-pill mp-f">F 12g</span><span class="macro-pill mp-cal">548 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả + Ngủ trưa</div><div class="meal-food">Ổi / Táo (150g) · Ngủ trưa 20–25 phút</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-cal">~65 kcal</span></div></div></div>
       <div class="meal-item" style="border:1px solid rgba(79,142,247,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent)">16h30</div></div><div style="flex:1"><div class="meal-name">Snack trước tập <span style="font-size:10px;color:var(--danger);font-weight:600">— Bắt buộc</span></div><div class="meal-food">Khoai lang hấp (150g) · Sữa chua không đường (100g)<br><span style="font-size:10px;color:var(--muted)">Ngày bơi + Pull: nạp carb đủ vì tiêu hao từ sáng</span></div><div class="macro-row"><span class="macro-pill mp-p">P 8g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 2g</span><span class="macro-pill mp-cal">178 kcal</span></div></div></div>
       <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">20h</div></div><div style="flex:1"><div class="meal-name">Bữa tối — Sau tập Pull <span style="font-size:10px;color:var(--accent2);font-weight:600">★ Protein cao nhất ngày</span></div><div class="meal-food">Cơm (120g) · Cá / tôm / thịt bò nạc (220g) · Rau xanh nhiều (200–250g)<br><span style="font-size:10px;color:var(--muted)">Rau: bông cải xanh, rau bina, rau muống · Ít cơm hơn vì đã nạp nhiều carb ban ngày</span></div><div class="macro-row"><span class="macro-pill mp-p">P 55g</span><span class="macro-pill mp-c">C 50g</span><span class="macro-pill mp-f">F 13g</span><span class="macro-pill mp-cal">541 kcal</span></div></div></div>
@@ -471,7 +425,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     <div style="font-size:11px;color:var(--muted);margin-bottom:12px;padding:8px 12px;background:var(--surface2);border-radius:8px">Áp dụng: <strong style="color:var(--text)">Thứ 3 · Thứ 6</strong> — Bơi sáng + Pickleball tối · Không tập tạ · Carb vừa phải</div>
     <div class="meal-list">
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">5h00</div></div><div style="flex:1"><div class="meal-name">Dậy · Nấu cơm hộp</div><div class="meal-food">Dậy 5h nấu cơm hộp mang đi trưa · Uống 300ml nước</div><div class="macro-row"><span class="macro-pill mp-cal">Nước lọc 300ml</span></div></div></div>
-      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">7h50</div></div><div style="flex:1"><div class="meal-name">Bữa sáng — Sau bơi</div><div class="meal-food">3 trứng luộc · 2 lát bánh mì đen (60g)<br><span style="font-size:10px;color:var(--muted)">Ăn ngay sau khi tắm, trước khi đến công ty</span></div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 11g</span><span class="macro-pill mp-cal">315 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">7h50</div></div><div style="flex:1"><div class="meal-name">Bữa sáng — Sau bơi</div><div class="meal-food">2 trứng luộc · 2 lát bánh mì đen (60g)<br><span style="font-size:10px;color:var(--muted)">Ăn ngay sau khi tắm, trước khi đến công ty</span></div><div class="macro-row"><span class="macro-pill mp-p">P 16g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 8g</span><span class="macro-pill mp-cal">240 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa — Cơm hộp</div><div class="meal-food">Cơm (120g) · Ức gà / cá (180g) · Rau xào (150–200g)<br><span style="font-size:10px;color:var(--muted)">Không cần nhiều carb vì không tập tạ · Tăng rau để no lâu</span></div><div class="macro-row"><span class="macro-pill mp-p">P 45g</span><span class="macro-pill mp-c">C 48g</span><span class="macro-pill mp-f">F 10g</span><span class="macro-pill mp-cal">458 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h30</div></div><div style="flex:1"><div class="meal-name">Hoa quả + Ngủ trưa</div><div class="meal-food">Ổi / Táo (150g) · Ngủ trưa 20–25 phút</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-cal">~65 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">15h30</div></div><div style="flex:1"><div class="meal-name">Bữa phụ chiều</div><div class="meal-food">Sữa chua không đường (100g)</div><div class="macro-row"><span class="macro-pill mp-p">P 5g</span><span class="macro-pill mp-c">C 8g</span><span class="macro-pill mp-cal">68 kcal</span></div></div></div>
@@ -487,7 +441,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     <div style="font-size:11px;color:var(--muted);margin-bottom:12px;padding:8px 12px;background:var(--surface2);border-radius:8px">Áp dụng: <strong style="color:var(--text)">Thứ 7</strong> — Bơi sáng + Gym Upper 14h + Cheat meal tối</div>
     <div class="meal-list">
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">5h00</div></div><div style="flex:1"><div class="meal-name">Dậy · Chuẩn bị</div><div class="meal-food">Nấu đồ ăn sáng + chuẩn bị đồ bơi · Uống 300ml nước</div><div class="macro-row"><span class="macro-pill mp-cal">Nước lọc 300ml</span></div></div></div>
-      <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">7h50</div></div><div style="flex:1"><div class="meal-name">Bữa sáng — Sau bơi <span style="font-size:10px;color:var(--accent2);font-weight:600">★ Ăn nhiều hơn</span></div><div class="meal-food">3 trứng luộc · 2 lát bánh mì đen · 1 hộp sữa chua (100g)<br><span style="font-size:10px;color:var(--muted)">Cần no đến 14h mới tập gym · Ăn đủ để không bị đói giữa sáng</span></div><div class="macro-row"><span class="macro-pill mp-p">P 28g</span><span class="macro-pill mp-c">C 40g</span><span class="macro-pill mp-f">F 13g</span><span class="macro-pill mp-cal">388 kcal</span></div></div></div>
+      <div class="meal-item" style="border:1px solid rgba(52,211,153,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent2)">7h50</div></div><div style="flex:1"><div class="meal-name">Bữa sáng — Sau bơi <span style="font-size:10px;color:var(--accent2);font-weight:600">★ Ăn nhiều hơn</span></div><div class="meal-food">2 trứng luộc · 2 lát bánh mì đen · 1 hộp sữa chua (100g)<br><span style="font-size:10px;color:var(--muted)">Cần no đến 14h mới tập gym · Ăn đủ để không bị đói giữa sáng</span></div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 40g</span><span class="macro-pill mp-f">F 10g</span><span class="macro-pill mp-cal">350 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">10h</div></div><div style="flex:1"><div class="meal-name">Bữa phụ sáng</div><div class="meal-food">Ổi / Táo (150g) · Hoặc thêm 1–2 trứng nếu còn đói</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-cal">~65 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa nhẹ</div><div class="meal-food">Cơm (100g) · Thịt / cá (150g) · Rau xào (150g)<br><span style="font-size:10px;color:var(--muted)">Ăn nhẹ vừa đủ — không ăn no vì 14h tập gym · Tránh ăn no quá</span></div><div class="macro-row"><span class="macro-pill mp-p">P 38g</span><span class="macro-pill mp-c">C 42g</span><span class="macro-pill mp-f">F 9g</span><span class="macro-pill mp-cal">405 kcal</span></div></div></div>
       <div class="meal-item" style="border:1px solid rgba(79,142,247,.2)"><div class="meal-time-col"><div class="meal-time" style="color:var(--accent)">13h</div></div><div style="flex:1"><div class="meal-name">Snack trước tập <span style="font-size:10px;color:var(--danger);font-weight:600">— Bắt buộc</span></div><div class="meal-food">Khoai lang hấp (120g) · Cách bữa trưa ít nhất 1 tiếng</div><div class="macro-row"><span class="macro-pill mp-p">P 2g</span><span class="macro-pill mp-c">C 22g</span><span class="macro-pill mp-cal">~100 kcal</span></div></div></div>
@@ -501,7 +455,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     <div style="font-size:11px;color:var(--muted);margin-bottom:12px;padding:8px 12px;background:var(--surface2);border-radius:8px">Áp dụng: <strong style="color:var(--text)">Chủ nhật</strong> — Nghỉ hoàn toàn · Tiếng Anh sáng · Lập trình chiều · Bi-a 17h · Refeed tối</div>
     <div class="meal-list">
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">5h30</div></div><div style="flex:1"><div class="meal-name">Dậy · Uống nước</div><div class="meal-food">500ml nước ngay khi dậy</div><div class="macro-row"><span class="macro-pill mp-cal">Nước lọc 500ml</span></div></div></div>
-      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">8h</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">3 trứng luộc · 2 lát bánh mì đen (60g)<br><span style="font-size:10px;color:var(--muted)">Ăn xong học tiếng Anh 8h–9h</span></div><div class="macro-row"><span class="macro-pill mp-p">P 22g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 11g</span><span class="macro-pill mp-cal">315 kcal</span></div></div></div>
+      <div class="meal-item"><div class="meal-time-col"><div class="meal-time">8h</div></div><div style="flex:1"><div class="meal-name">Bữa sáng</div><div class="meal-food">2 trứng luộc · 2 lát bánh mì đen (60g)<br><span style="font-size:10px;color:var(--muted)">Ăn xong học tiếng Anh 8h–9h</span></div><div class="macro-row"><span class="macro-pill mp-p">P 16g</span><span class="macro-pill mp-c">C 32g</span><span class="macro-pill mp-f">F 8g</span><span class="macro-pill mp-cal">240 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">12h</div></div><div style="flex:1"><div class="meal-name">Bữa trưa</div><div class="meal-food">Cơm gạo lứt (100g) · Cá / tôm (200g) · Rau xào / luộc nhiều (200g)</div><div class="macro-row"><span class="macro-pill mp-p">P 48g</span><span class="macro-pill mp-c">C 38g</span><span class="macro-pill mp-f">F 10g</span><span class="macro-pill mp-cal">434 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">13h</div></div><div style="flex:1"><div class="meal-name">Hoa quả + Nghỉ trưa</div><div class="meal-food">Ổi / Táo (150g) · Nghỉ ngơi trước khi học lập trình</div><div class="macro-row"><span class="macro-pill mp-c">C 12g</span><span class="macro-pill mp-cal">~65 kcal</span></div></div></div>
       <div class="meal-item"><div class="meal-time-col"><div class="meal-time">16h</div></div><div style="flex:1"><div class="meal-name">Snack chiều — Trước bi-a</div><div class="meal-food">Sữa chua không đường (100g) · Ổi / táo nhỏ</div><div class="macro-row"><span class="macro-pill mp-p">P 5g</span><span class="macro-pill mp-c">C 16g</span><span class="macro-pill mp-cal">~110 kcal</span></div></div></div>
@@ -732,7 +686,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
   <div class="hero">
     <div class="hero-label">Time biểu</div>
     <div class="hero-title">Lịch trình hằng tuần</div>
-    <div class="hero-sub">Dậy 5h30 · Làm việc 8h30–17h30 · Học 21h–23h</div>
+    <div class="hero-sub">Dậy 5h30 · Cardio sáng (T2/T4/T5) · Gym trưa 12h · Học 20h–22h30 · Ngủ 22h30</div>
   </div>
   <div class="section-title">Chọn ngày</div>
   <div style="display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap" id="sch-tabs">
@@ -745,176 +699,572 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,.95);backdrop-fil
     <button class="nav-tab" onclick="showSch('cn',this)">Chủ nhật</button>
   </div>
 
-  <!-- T2: Push + Tiếng Anh sáng + Lập trình tối -->
-  <div class="sch-panel" id="sch-t2">
+  <!-- T2 -->
+  <div class="sch-panel" id="sch-t2" style="display:block">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(79,142,247,.15);color:var(--accent)">GYM — PUSH</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH TỐI</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 5h45</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">HỌC TA CTV 7h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(79,142,247,.15);color:var(--accent)">GYM PUSH 12h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">HỌC LP 20h</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Chuẩn bị</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị đồ ăn trưa mang đi</div></div></div>
-      <div class="sch-item"><div class="sch-time">5h45</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Flashcard / Nghe podcast / Luyện ngữ pháp — 45 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Ăn sáng & Di chuyển</div><div class="sch-desc">3 trứng + bánh mì đen · Đi làm</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca sáng</div></div></div>
-      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title">Nghỉ trưa</div><div class="sch-desc">Ăn trưa · Ngủ trưa 20–30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca chiều</div></div></div>
-      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển & Chuẩn bị</div><div class="sch-desc">Ra phòng tập 10 phút · Thay đồ + khởi động 10 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:#4f8ef7"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent)">Gym — PUSH</div><div class="sch-desc">Ngực · Vai · Tricep · 1 tiếng 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà</div><div class="sch-desc">Di chuyển 20 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h50</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn tối & Vệ sinh</div><div class="sch-desc">Nấu ăn + ăn tối + tắm rửa + dọn dẹp — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">21h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi — 6.5 tiếng ngủ</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Uống 500ml nước</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h45–6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Nấu cơm hộp + Cardio đi bộ máy</div><div class="sch-desc">Linh hoạt trong 45 phút · Nấu xong thì đi bộ hoặc xen kẽ tùy ngày</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng</div><div class="sch-desc">2 trứng + 2 lát bánh mì đen · ~240 kcal</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h15</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến công ty</div><div class="sch-desc">Đến nơi 7h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh tại cty</div><div class="sch-desc">Flashcard / Nghe / Luyện ngữ pháp — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty đến 12h</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack nhẹ trước tập</div><div class="sch-desc">1 trứng luộc + khoai lang 80g · Ăn trước tập 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent)">Gym — PUSH</div><div class="sch-desc">Ngực · Vai · Tricep · 6 bài · 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa sau tập + Ngủ trưa</div><div class="sch-desc">Cơm 150g + thịt/cá 250g + rau 200g · Ngủ 20 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Nấu ăn · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
     </div>
   </div>
 
-  <!-- T3: Bơi sáng + Pickleball tối + Lập trình -->
+  <!-- T3 -->
   <div class="sch-panel" id="sch-t3" style="display:none">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">PICKLEBALL TỐI</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH TỐI</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI 6h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">ĐI BỘ 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">HỌC TA 20h</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Nấu cơm hộp</div><div class="sch-desc">Nấu đồ ăn chuẩn bị bữa trưa mang đi — 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Chuẩn bị đồ bơi · Di chuyển</div></div></div>
-      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến hồ bơi</div><div class="sch-desc">Đến nơi trước lớp 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Nấu cơm hộp trưa</div><div class="sch-desc">Nấu đồ ăn mang đi · Uống 300ml nước trước bơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Chuẩn bị đồ bơi · Di chuyển</div></div></div>
       <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Học Bơi</div><div class="sch-desc">Lớp bơi — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm rửa sau bơi</div><div class="sch-desc">20 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">7h50</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến công ty</div><div class="sch-desc">Ăn sáng trên đường nếu cần</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca sáng</div></div></div>
-      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title">Nghỉ trưa</div><div class="sch-desc">Ăn cơm hộp · Ngủ trưa 20–30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca chiều</div></div></div>
-      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title" style="color:var(--warn)">Pickleball</div><div class="sch-desc">Ăn snack nhẹ trước · Chơi pickleball</div></div></div>
-      <div class="sch-item"><div class="sch-time">20h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà</div><div class="sch-desc">Di chuyển về nhà</div></div></div>
-      <div class="sch-item"><div class="sch-time">20h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn tối & Vệ sinh</div><div class="sch-desc">Ăn tối + tắm rửa + dọn dẹp — 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">21h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng · Di chuyển</div><div class="sch-desc">Tắm 20 phút · 2 trứng + bánh mì · Đến công ty 8h</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty đến 12h</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa — Cơm hộp + Ngủ trưa</div><div class="sch-desc">Cơm 120g + thịt/cá 210g + rau · Ngủ 20–25 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tan làm · Di chuyển về</div><div class="sch-desc">Chuẩn bị đồ đi bộ</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Đi bộ máy 30 phút</div><div class="sch-desc">Bù cardio cho ngày bơi · 5.5–6.5 km/h</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Nấu ăn · Ăn tối · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Ngày bơi học TA thay LP — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
     </div>
   </div>
 
-  <!-- T4: Legs + Tiếng Anh sáng + Lập trình tối -->
+  <!-- T4 -->
   <div class="sch-panel" id="sch-t4" style="display:none">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">GYM — LEGS</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH TỐI</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 5h45</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">HỌC TA CTV 7h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">GYM LEGS 12h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">HỌC LP 20h</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Chuẩn bị</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị đồ ăn trưa</div></div></div>
-      <div class="sch-item"><div class="sch-time">5h45</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Flashcard / Nghe podcast / Luyện ngữ pháp — 45 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Ăn sáng & Di chuyển</div><div class="sch-desc">3 trứng + bánh mì đen · Đi làm</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca sáng</div></div></div>
-      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title">Nghỉ trưa</div><div class="sch-desc">Ăn trưa · Ngủ trưa 20–30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca chiều</div></div></div>
-      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển & Chuẩn bị</div><div class="sch-desc">Ra phòng tập 10 phút · Thay đồ + khởi động 10 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title" style="color:var(--warn)">Gym — LEGS</div><div class="sch-desc">Quad · Hamstring · Mông · Bắp chân — 1 tiếng 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà</div><div class="sch-desc">Di chuyển 20 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h50</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn tối & Vệ sinh</div><div class="sch-desc">Nấu ăn + ăn tối + tắm rửa + dọn dẹp — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">21h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi — 6.5 tiếng ngủ</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Uống 500ml nước</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h45–6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Nấu cơm hộp + Cardio đi bộ máy</div><div class="sch-desc">Linh hoạt trong 45 phút · Nấu xong thì đi bộ hoặc xen kẽ tùy ngày</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng</div><div class="sch-desc">2 trứng + 2 lát bánh mì đen</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh tại cty</div><div class="sch-desc">Flashcard / Nghe / Luyện ngữ pháp — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty đến 12h</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack trước tập Legs</div><div class="sch-desc">Khoai lang 120g + sữa chua · Ngày Legs ăn nhiều hơn</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title" style="color:var(--warn)">Gym — LEGS</div><div class="sch-desc">Quad · Ham · Mông · Bắp chân · 6 bài · 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa Legs + Ngủ trưa</div><div class="sch-desc">Cơm 180g + thịt/cá 250g + rau 200g · Ngủ 20 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Nấu ăn · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
     </div>
   </div>
 
-  <!-- T5: Bơi sáng + Pull tối + Lập trình -->
+  <!-- T5 -->
   <div class="sch-panel" id="sch-t5" style="display:none">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">GYM — PULL</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH TỐI</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 5h45</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">HỌC TA CTV 7h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">GYM PULL 12h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">HỌC LP 20h</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Nấu cơm hộp</div><div class="sch-desc">Nấu đồ ăn chuẩn bị bữa trưa mang đi — 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Chuẩn bị đồ bơi · Di chuyển</div></div></div>
-      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Học Bơi</div><div class="sch-desc">Lớp bơi — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm rửa & Di chuyển</div><div class="sch-desc">Tắm 20 phút · Đến công ty lúc 7h50</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca sáng</div></div></div>
-      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title">Nghỉ trưa</div><div class="sch-desc">Ăn cơm hộp · Ngủ trưa 20–30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca chiều</div></div></div>
-      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển & Chuẩn bị</div><div class="sch-desc">Ra phòng tập · Thay đồ + khởi động</div></div></div>
-      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Gym — PULL</div><div class="sch-desc">Lưng · Bicep — 1 tiếng 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà & Ăn tối</div><div class="sch-desc">Di chuyển 20 phút · Nấu ăn + tắm rửa + dọn dẹp — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">21h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Uống 500ml nước</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h45–6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Nấu cơm hộp + Cardio đi bộ máy</div><div class="sch-desc">Linh hoạt trong 45 phút · Nấu xong thì đi bộ hoặc xen kẽ tùy ngày</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng</div><div class="sch-desc">2 trứng + 2 lát bánh mì đen</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh tại cty</div><div class="sch-desc">Flashcard / Nghe / Luyện ngữ pháp — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty đến 12h</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack nhẹ trước tập Pull</div><div class="sch-desc">1 trứng luộc + khoai lang 80g</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Gym — PULL</div><div class="sch-desc">Lưng · Bicep · 6 bài · 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa sau tập + Ngủ trưa</div><div class="sch-desc">Cơm 150g + thịt/cá 250g + rau 200g · Ngủ 20 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Nấu ăn · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
     </div>
   </div>
 
-  <!-- T6: Bơi sáng + Pickleball tối + Lập trình + Tiếng Anh sáng -->
+  <!-- T6 -->
   <div class="sch-panel" id="sch-t6" style="display:none">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">PICKLEBALL TỐI</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH TỐI</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI 6h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">ĐI BỘ 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">HỌC TA 20h</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Nấu cơm hộp</div><div class="sch-desc">Nấu đồ ăn chuẩn bị bữa trưa mang đi — 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Chuẩn bị đồ bơi · Di chuyển</div></div></div>
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Nấu cơm hộp trưa</div><div class="sch-desc">Nấu đồ ăn mang đi · Uống 300ml nước trước bơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Di chuyển đến hồ</div></div></div>
       <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Học Bơi</div><div class="sch-desc">Lớp bơi — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm rửa & Di chuyển</div><div class="sch-desc">Tắm 20 phút · Đến công ty lúc 7h50</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca sáng</div></div></div>
-      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title">Nghỉ trưa</div><div class="sch-desc">Ăn cơm hộp · Ngủ trưa 20–30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc</div><div class="sch-desc">Công ty — ca chiều</div></div></div>
-      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title" style="color:var(--warn)">Pickleball</div><div class="sch-desc">Ăn snack nhẹ trước · Chơi pickleball</div></div></div>
-      <div class="sch-item"><div class="sch-time">20h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà & Ăn tối</div><div class="sch-desc">Ăn tối + tắm rửa + dọn dẹp — 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">21h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng · Di chuyển</div><div class="sch-desc">Tắm 20 phút · 2 trứng + bánh mì · Đến công ty 8h</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty · Không học sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa — Cơm hộp + Ngủ trưa</div><div class="sch-desc">Cơm 120g + thịt/cá 210g + rau · Ngủ 25 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tan làm · Di chuyển về</div><div class="sch-desc">Chuẩn bị đồ đi bộ</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Đi bộ máy 30 phút</div><div class="sch-desc">Bù cardio cho ngày bơi · 5.5–6.5 km/h</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Nấu ăn · Ăn tối · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Ngày bơi học TA thay LP — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
     </div>
   </div>
 
-  <!-- T7: Bơi sáng + Gym Upper + Cheat meal -->
+  <!-- T7 -->
   <div class="sch-panel" id="sch-t7" style="display:none">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">GYM — UPPER</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">GYM UPPER 7h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">HỌC LP 14h–17h</span>
       <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(248,113,113,.12);color:var(--danger)">CHEAT MEAL TỐI</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Nấu cơm hộp</div><div class="sch-desc">Chuẩn bị đồ ăn + đồ bơi — 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Di chuyển đến hồ bơi</div></div></div>
-      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Học Bơi</div><div class="sch-desc">Lớp bơi — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm rửa & Về nhà</div><div class="sch-desc">Tắm 20 phút · Về nhà nghỉ ngơi</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn sáng & Nghỉ ngơi</div><div class="sch-desc">Ăn sáng đủ · Nghỉ ngơi tự do buổi sáng</div></div></div>
-      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack trước tập</div><div class="sch-desc">Khoai lang + sữa chua · Chuẩn bị đồ gym</div></div></div>
-      <div class="sch-item"><div class="sch-time">14h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Gym — UPPER + CORE</div><div class="sch-desc">Thân trên tổng hợp + Core — 1 tiếng 30 phút</div></div></div>
-      <div class="sch-item"><div class="sch-time">15h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà & Nghỉ ngơi</div><div class="sch-desc">Tắm rửa · Nghỉ ngơi tự do</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--danger)"></div><div class="sch-content"><div class="sch-title" style="color:var(--danger)">Cheat Meal tối</div><div class="sch-desc">Đi ăn thoải mái · Dừng ở 80% no · Hạn chế bia rượu</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi — ngày dày nhất trong tuần</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Ngủ thêm 1 tiếng</div><div class="sch-desc">Uống nước · Ăn nhẹ: 1 trứng + 1 lát bánh mì trước tập</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến phòng gym</div><div class="sch-desc">Gym sáng vắng — không phải chờ máy</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Gym — UPPER + CORE</div><div class="sch-desc">Thân trên tổng hợp · 6 bài · 1 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">9h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng đầy đủ</div><div class="sch-desc">2 trứng + bánh mì + sữa chua · Bổ sung protein sau tập</div></div></div>
+      <div class="sch-item"><div class="sch-time">10h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ ngơi tự do</div><div class="sch-desc">Giải trí · Dọn dẹp</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa</div><div class="sch-desc">Cơm + thịt + rau · Bữa trưa đầy đủ</div></div></div>
+      <div class="sch-item"><div class="sch-time">14h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 3 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ ngơi · Chuẩn bị cheat meal</div><div class="sch-desc">Tự do buổi tối</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--danger)"></div><div class="sch-content"><div class="sch-title" style="color:var(--danger)">Cheat Meal tối</div><div class="sch-desc">Ăn thoải mái · Dừng ở 80% no · Hạn chế bia rượu</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">8 tiếng ngủ · Dậy 6h30 chủ nhật</div></div></div>
     </div>
   </div>
 
-  <!-- CN: Nghỉ + Tiếng Anh + Lập trình + Bi-a -->
+  <!-- CN -->
   <div class="sch-panel" id="sch-cn" style="display:none">
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH SÁNG</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH CHIỀU</span>
-      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">BI-A CHIỀU</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH 8h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(79,142,247,.15);color:var(--accent)">FULL BODY 10h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">HỌC LP 14h–16h</span>
     </div>
     <div class="sch-timeline">
-      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy & Chuẩn bị</div><div class="sch-desc">Vệ sinh cá nhân · Ăn sáng nhẹ</div></div></div>
-      <div class="sch-item"><div class="sch-time">8h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Luyện tập có hệ thống — 1 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">9h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ ngơi tự do</div><div class="sch-desc">Giải trí · Dọn dẹp · Chuẩn bị bữa ăn tuần mới</div></div></div>
-      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa</div><div class="sch-desc">Bữa trưa bình thường · Nghỉ trưa ngắn</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Nghỉ ngơi sáng</div><div class="sch-desc">Uống nước · Ăn sáng nhẹ</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Luyện tập có hệ thống — 1 tiếng · Não tươi nhất buổi sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">9h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn sáng đầy đủ · Snack trước tập</div><div class="sch-desc">2 trứng + bánh mì · Khoai lang 100g trước tập 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">10h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent)">Gym — FULL BODY</div><div class="sch-desc">Squat · Bench · RDL · OHP · Lat pulldown · Plank · 1 tiếng 15 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h15</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Về nhà · Ăn trưa</div><div class="sch-desc">Cơm + thịt + rau · Nghỉ trưa 20–30 phút</div></div></div>
       <div class="sch-item"><div class="sch-time">14h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">16h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ ngơi & Chuẩn bị</div><div class="sch-desc">Nghỉ 1 tiếng trước khi đi bi-a</div></div></div>
+      <div class="sch-item"><div class="sch-time">16h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tự do buổi chiều tối</div><div class="sch-desc">Nghỉ ngơi · Giải trí · Chuẩn bị tuần mới</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn tối — Refeed</div><div class="sch-desc">Cơm nhiều hơn bình thường · Chọn món nạc · Reset leptin tuần mới</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">8 tiếng ngủ · Dậy 5h30 thứ 2 bắt đầu tuần mới</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- NUTRITION -->
+<div class="page" id="page-nutrition">
+  <div class="hero">
+    <div class="hero-label">Dinh dưỡng</div>
+    <div class="hero-title">Hướng dẫn thực phẩm</div>
+    <div class="hero-sub">Lưu ý chọn lựa & chế biến từng nhóm thực phẩm</div>
+  </div>
+
+  <!-- THỊT -->
+  <div class="section-title">Nhóm thịt — Protein chính</div>
+  <div class="nutr-grid">
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Ức gà / Đùi gà không da</div><div class="nutr-macro">P 31g · F 3.6g / 100g · ~165 kcal</div></div></div>
+      <div class="nutr-note">Nguồn protein tốt nhất cho gym. Luộc hoặc áp chảo ít dầu. Đùi không da vẫn tốt hơn ức nếu cần thêm chất béo.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 200–230g/bữa trưa · 150–180g/bữa tối</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Cá (rô, trắm, basa, thu)</div><div class="nutr-macro">P 20–25g · F 2–8g / 100g</div></div></div>
+      <div class="nutr-note">Ưu tiên hấp hoặc kho ít nước. Cá béo như cá thu, cá hồi có omega-3 tốt cho hồi phục cơ. Ăn tối ít nhất 3 lần/tuần.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 200g/bữa</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Tôm / Hải sản</div><div class="nutr-macro">P 24g · F 0.3g / 100g · ~99 kcal</div></div></div>
+      <div class="nutr-note">Protein cao, calo rất thấp. Luộc hoặc hấp giữ nguyên dinh dưỡng tốt nhất. Không chiên bột.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 200g/bữa</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Thịt heo nạc (thăn, nạc vai)</div><div class="nutr-macro">P 22g · F 6g / 100g · ~145 kcal</div></div></div>
+      <div class="nutr-note">Chọn phần nạc, tránh ba chỉ và sườn nhiều mỡ. Kho ít nước đường hoặc áp chảo. Không ăn da.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 150–180g/bữa</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Thịt bò nạc</div><div class="nutr-macro">P 26g · F 8g / 100g · ~180 kcal</div></div></div>
+      <div class="nutr-note">Giàu creatine và sắt tự nhiên, hỗ trợ tập tạ tốt. Chọn thăn hoặc bắp bò. Xào nhanh lửa lớn ít dầu.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 150g/bữa · 2–3 lần/tuần</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Trứng gà</div><div class="nutr-macro">P 6g · F 5g / quả · ~78 kcal</div></div></div>
+      <div class="nutr-note">Luộc hoặc chiên ít dầu olive. Ăn cả lòng đỏ — có vitamin D và cholin hỗ trợ phục hồi cơ. 3 quả/ngày là an toàn.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 3 quả/sáng cố định</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Đậu phụ / Đậu hũ</div><div class="nutr-macro">P 8g · F 4g / 100g · ~76 kcal</div></div></div>
+      <div class="nutr-note">Protein thực vật tốt, dùng bổ sung bữa tối kèm thịt. Không thay thế hoàn toàn thịt vì protein chất lượng thấp hơn.</div>
+      <div class="nutr-amount">📏 Khẩu phần: 100g/bữa tối, 3–4 lần/tuần</div>
+    </div>
+    <div class="nutr-card bad">
+      <div class="nutr-header"><span class="nutr-icon">❌</span><div><div class="nutr-name">Thịt chế biến sẵn</div><div class="nutr-macro">Xúc xích · Chả lụa · Thịt hộp</div></div></div>
+      <div class="nutr-note">Nhiều muối, chất bảo quản, chất béo ẩn. Không phù hợp cho giai đoạn giảm mỡ. Hạn chế tối đa.</div>
+      <div class="nutr-amount">📏 Tránh hoàn toàn trong giai đoạn này</div>
+    </div>
+  </div>
+
+  <!-- RAU -->
+  <div class="section-title" style="margin-top:20px">Nhóm rau — Vitamin & Chất xơ</div>
+  <div class="nutr-grid">
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Rau muống · Cải xanh · Cải thìa</div><div class="nutr-macro">~20 kcal / 100g · Sắt · Canxi cao</div></div></div>
+      <div class="nutr-note">Rau chủ lực hàng ngày. Xào tỏi ít dầu olive hoặc luộc. Dễ mua, rẻ, đủ vi chất.</div>
+      <div class="nutr-amount">📏 150–200g/bữa trưa · 200–250g/bữa tối</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Bông cải xanh (Broccoli)</div><div class="nutr-macro">P 2.8g · ~34 kcal / 100g · Vitamin C cao</div></div></div>
+      <div class="nutr-note">Protein thực vật cao nhất trong rau. Hấp hoặc xào nhanh — không luộc lâu mất vitamin. Ưu tiên ăn 3–4 lần/tuần.</div>
+      <div class="nutr-amount">📏 150–200g/bữa</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Giá đỗ · Dưa leo · Cà chua</div><div class="nutr-macro">~15–20 kcal / 100g</div></div></div>
+      <div class="nutr-note">Ăn sống kèm bữa — bù nước, enzyme tiêu hóa. Cà chua có lycopene chống oxy hóa tốt sau tập. Dưa leo bù kali.</div>
+      <div class="nutr-amount">📏 Ăn thoải mái kèm bữa, không giới hạn</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Bắp cải · Súp lơ trắng</div><div class="nutr-macro">~25 kcal / 100g · Chất xơ cao</div></div></div>
+      <div class="nutr-note">No lâu, ít calo. Luộc hoặc xào. Thay đổi luân phiên với rau muống để đủ vi chất đa dạng.</div>
+      <div class="nutr-amount">📏 150–200g/bữa</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Rau bina (Spinach) · Rau ngót</div><div class="nutr-macro">~23 kcal / 100g · Magie · Sắt</div></div></div>
+      <div class="nutr-note">Giàu magie giúp co cơ và hồi phục sau tập. Rau ngót nấu canh. Rau bina xào tỏi hoặc ăn sống trong salad.</div>
+      <div class="nutr-amount">📏 100–150g/bữa</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Cà rốt · Ngô ngọt</div><div class="nutr-macro">Cà rốt ~41 kcal · Ngô ~86 kcal / 100g</div></div></div>
+      <div class="nutr-note">Có đường tự nhiên và carb khá. Tính vào tổng carb ngày. Không ăn quá 100g cà rốt/bữa, ngô nên hạn chế ngày ít carb.</div>
+      <div class="nutr-amount">📏 Tối đa 100g/bữa · Không ăn ngày carb thấp</div>
+    </div>
+    <div class="nutr-card bad">
+      <div class="nutr-header"><span class="nutr-icon">❌</span><div><div class="nutr-name">Rau củ muối chua · Dưa muối</div><div class="nutr-macro">Natri rất cao</div></div></div>
+      <div class="nutr-note">Nhiều muối → giữ nước → cân tăng ảo, khó theo dõi tiến độ thật. Hạn chế tối đa trong giai đoạn giảm mỡ.</div>
+      <div class="nutr-amount">📏 Tránh hoặc ăn tối đa 1 lần/tuần lượng nhỏ</div>
+    </div>
+  </div>
+
+  <!-- TINH BỘT -->
+  <div class="section-title" style="margin-top:20px">Nhóm tinh bột — Năng lượng</div>
+  <div class="nutr-grid">
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Khoai lang hấp</div><div class="nutr-macro">C 20g · ~86 kcal / 100g · Chất xơ cao</div></div></div>
+      <div class="nutr-note">Carb phức tạp, hấp thu chậm — lý tưởng cho snack trước tập. No lâu hơn cơm trắng. Hấp nguyên vỏ giữ dinh dưỡng tốt nhất.</div>
+      <div class="nutr-amount">📏 120–150g trước tập · Snack 11h cố định</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Gạo lứt</div><div class="nutr-macro">C 45g · ~216 kcal / 100g cơm · Chất xơ cao</div></div></div>
+      <div class="nutr-note">Tốt hơn gạo trắng về chất xơ và GI thấp hơn. Dùng ngày nghỉ và bữa tối để no lâu hơn. Không cần dùng 100% — thay đổi luân phiên với gạo trắng.</div>
+      <div class="nutr-amount">📏 100–120g cơm/bữa tối · 100g ngày nghỉ</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Cơm trắng</div><div class="nutr-macro">C 45g · ~200 kcal / 100g cơm</div></div></div>
+      <div class="nutr-note">Vẫn dùng được, chỉ cần kiểm soát lượng. Ngày tập nặng (Legs) ăn nhiều hơn — 150–180g cơm. Ngày nghỉ giảm xuống 80–100g.</div>
+      <div class="nutr-amount">📏 Ngày tập: 150g · Ngày nghỉ: 80–100g · Xới bằng chén nhỏ</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Bánh mì đen / Nguyên cám</div><div class="nutr-macro">C 15g · ~70 kcal / lát</div></div></div>
+      <div class="nutr-note">Dùng cho bữa sáng cố định. Chọn loại nguyên cám thật sự — đọc nhãn, thành phần đầu tiên phải là "whole wheat". Tránh bánh mì trắng.</div>
+      <div class="nutr-amount">📏 2 lát / sáng · Không thay thế cơm bữa trưa</div>
+    </div>
+    <div class="nutr-card bad">
+      <div class="nutr-header"><span class="nutr-icon">❌</span><div><div class="nutr-name">Bánh mì trắng · Mì tôm · Bún tươi nhiều</div><div class="nutr-macro">GI cao · Đường ẩn nhiều</div></div></div>
+      <div class="nutr-note">GI cao gây tăng đường huyết nhanh rồi hạ đột ngột — mệt và thèm ăn. Mì tôm thêm nhiều muối và dầu. Hạn chế tối đa.</div>
+      <div class="nutr-amount">📏 Tránh hoàn toàn trong tuần · Chỉ dùng khi cheat meal</div>
+    </div>
+  </div>
+
+  <!-- DẦU ĂN -->
+  <div class="section-title" style="margin-top:20px">Dầu ăn — Chất béo</div>
+  <div class="nutr-grid">
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Dầu olive extra virgin</div><div class="nutr-macro">F 14g · 120 kcal / muỗng canh</div></div></div>
+      <div class="nutr-note">Chất béo không bão hòa đơn tốt nhất. Dùng xào rau lửa vừa hoặc trộn salad. Không chiên ở nhiệt độ cao — điểm khói thấp. Mày đang dùng đúng loại rồi.</div>
+      <div class="nutr-amount">📏 Tối đa 1–1.5 muỗng canh/bữa · ~2–3 muỗng canh/ngày</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Dầu hướng dương · Dầu đậu nành</div><div class="nutr-macro">F 14g · 120 kcal / muỗng canh</div></div></div>
+      <div class="nutr-note">Dùng được để chiên xào nhiệt độ cao hơn dầu olive. Nhưng nhiều omega-6 nếu dùng quá nhiều gây viêm. Kiểm soát lượng như dầu olive.</div>
+      <div class="nutr-amount">📏 Tối đa 1 muỗng canh/bữa</div>
+    </div>
+    <div class="nutr-card bad">
+      <div class="nutr-header"><span class="nutr-icon">❌</span><div><div class="nutr-name">Mỡ heo · Bơ thực vật · Dầu cọ</div><div class="nutr-macro">Chất béo bão hòa cao · Trans fat</div></div></div>
+      <div class="nutr-note">Chất béo xấu, cản trở giảm mỡ và tăng cholesterol xấu. Tránh hoàn toàn trong giai đoạn này.</div>
+      <div class="nutr-amount">📏 Tránh hoàn toàn</div>
+    </div>
+  </div>
+
+  <!-- GIA VỊ -->
+  <div class="section-title" style="margin-top:20px">Gia vị — Nêm nếm</div>
+  <div class="nutr-grid">
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Tỏi tươi · Gừng · Hành tím</div><div class="nutr-macro">Gần như 0 calo · Chống viêm tự nhiên</div></div></div>
+      <div class="nutr-note">Tỏi tươi băm tốt hơn bột tỏi — allicin hoạt tính cao hơn. Gừng giảm đau cơ sau tập. Hành tím giàu quercetin chống oxy hóa.</div>
+      <div class="nutr-amount">📏 Dùng thoải mái · Tỏi 2–3 tép/bữa</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Tiêu đen · Bột ớt · Ớt tươi</div><div class="nutr-macro">Gần như 0 calo</div></div></div>
+      <div class="nutr-note">Tiêu đen có piperine tăng hấp thụ dinh dưỡng. Ớt/capsaicin kích thích trao đổi chất nhẹ. Bột ớt nguyên chất dùng thoải mái. Dùng mày đang có là ổn.</div>
+      <div class="nutr-amount">📏 Dùng thoải mái theo khẩu vị</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Nước mắm nguyên chất · Muối hạt</div><div class="nutr-macro">Natri có kiểm soát</div></div></div>
+      <div class="nutr-note">Nước mắm nguyên chất (độ đạm 40N+ trở lên) không chứa đường ẩn. Pha loãng khi dùng. Muối hạt tốt hơn muối iốt tinh chế.</div>
+      <div class="nutr-amount">📏 Nước mắm tối đa 1–2 muỗng cà phê/bữa · Muối dưới 5g/ngày</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Bột tỏi · Bột hành</div><div class="nutr-macro">Gần như 0 calo</div></div></div>
+      <div class="nutr-note">Dùng được khi không có tỏi tươi. Tiện lợi nhưng mất một phần hoạt chất. Dùng nốt hàng có sẵn, sau đó chuyển sang tỏi tươi.</div>
+      <div class="nutr-amount">📏 Dùng thoải mái · Ưu tiên thay bằng tỏi tươi khi có thể</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Gói gia vị hỗn hợp có sẵn</div><div class="nutr-macro">Muối + đường ẩn + bột ngọt</div></div></div>
+      <div class="nutr-note">Dùng hết hàng đang có — dùng nửa gói, tráng qua nước sau khi ướp nếu thấy mặn. Sau khi hết thì chuyển sang gia vị tự nhiên hoàn toàn.</div>
+      <div class="nutr-amount">📏 Dùng nốt rồi không mua thêm · Nửa gói/lần thay vì cả gói</div>
+    </div>
+    <div class="nutr-card bad">
+      <div class="nutr-header"><span class="nutr-icon">❌</span><div><div class="nutr-name">Tương ớt · Sốt mayonnaise · Tương cà</div><div class="nutr-macro">Đường cao · Chất béo ẩn</div></div></div>
+      <div class="nutr-note">Đường và calo ẩn rất nhiều. 1 muỗng tương ớt có thể chứa 5–8g đường. Thay bằng ớt tươi + nước mắm pha.</div>
+      <div class="nutr-amount">📏 Tránh hoàn toàn trong tuần · Chỉ dùng cheat meal</div>
+    </div>
+  </div>
+
+  <!-- ĐỒ UỐNG -->
+  <div class="section-title" style="margin-top:20px">Đồ uống</div>
+  <div class="nutr-grid">
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Nước lọc</div><div class="nutr-macro">0 kcal · Mục tiêu 2.5–3L/ngày</div></div></div>
+      <div class="nutr-note">Quan trọng nhất. Uống 500ml ngay sau khi dậy sáng. Trước tập 30 phút uống 300–400ml. Sau tập bù 500–700ml. Ngày bơi + gym cần 3L+.</div>
+      <div class="nutr-amount">📏 2.5L ngày thường · 3L+ ngày bơi hoặc pickleball</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Sữa tươi không đường</div><div class="nutr-macro">P 3.4g · C 5g · ~60 kcal / 100ml</div></div></div>
+      <div class="nutr-note">Bổ sung protein và canxi. Uống sau tập hoặc buổi chiều. Chọn TH True Milk hoặc Vinamilk không đường.</div>
+      <div class="nutr-amount">📏 200ml/ngày · Bữa phụ chiều hoặc sau tập</div>
+    </div>
+    <div class="nutr-card good">
+      <div class="nutr-header"><span class="nutr-icon">✅</span><div><div class="nutr-name">Trà xanh không đường</div><div class="nutr-macro">~2 kcal / ly · Catechin chống oxy hóa</div></div></div>
+      <div class="nutr-note">Catechin trong trà xanh hỗ trợ nhẹ việc đốt mỡ và chống viêm. Uống sáng hoặc trước tập 1 tiếng. Không uống sau 17h vì caffeine ảnh hưởng giấc ngủ.</div>
+      <div class="nutr-amount">📏 1–2 ly/ngày · Buổi sáng hoặc trước tập</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Cà phê đen không đường</div><div class="nutr-macro">~5 kcal · Caffeine 80–100mg/ly</div></div></div>
+      <div class="nutr-note">Tăng hiệu suất tập nếu uống 30–45 phút trước gym. Tối đa 2 ly/ngày. Không uống sau 15h — ảnh hưởng giấc ngủ sẽ làm hồi phục cơ kém hơn.</div>
+      <div class="nutr-amount">📏 Tối đa 2 ly/ngày · Trước 15h · Không thêm đường</div>
+    </div>
+    <div class="nutr-card warn">
+      <div class="nutr-header"><span class="nutr-icon">⚠️</span><div><div class="nutr-name">Nước điện giải (Pocari · Aquarius)</div><div class="nutr-macro">C 6–7g · ~27 kcal / 100ml</div></div></div>
+      <div class="nutr-note">Chỉ dùng sau buổi bơi + pickleball cùng ngày (T3/T6) khi mất điện giải nhiều. Ngày thường không cần — nước lọc là đủ.</div>
+      <div class="nutr-amount">📏 Chỉ ngày T3 và T6 · 1 chai 500ml sau khi xong cả 2 buổi</div>
+    </div>
+    <div class="nutr-card bad">
+      <div class="nutr-header"><span class="nutr-icon">❌</span><div><div class="nutr-name">Nước ngọt có ga · Nước tăng lực · Trà sữa</div><div class="nutr-macro">Đường cao · 150–400 kcal/ly</div></div></div>
+      <div class="nutr-note">Phá vỡ hoàn toàn kế hoạch calo. 1 ly trà sữa có thể bằng cả bữa ăn. Tránh tuyệt đối trong tuần. Cheat meal thì uống nhưng tính vào tổng calo.</div>
+      <div class="nutr-amount">📏 Tránh hoàn toàn · Chỉ cheat meal nếu thật sự thèm</div>
+    </div>
+  </div>
+</div>
+
+<!-- SCHEDULE -->
+<div class="page" id="page-schedule">
+  <div class="hero">
+    <div class="hero-label">Time biểu</div>
+    <div class="hero-title">Lịch trình hằng tuần</div>
+    <div class="hero-sub">Dậy 5h30 · Gym trưa 12h (T2/T4/T5) · Cardio tối 18h · Học 20h–22h30</div>
+  </div>
+  <div class="section-title">Chọn ngày</div>
+  <div style="display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap" id="sch-tabs">
+    <button class="nav-tab active" onclick="showSch('t2',this)">Thứ 2</button>
+    <button class="nav-tab" onclick="showSch('t3',this)">Thứ 3</button>
+    <button class="nav-tab" onclick="showSch('t4',this)">Thứ 4</button>
+    <button class="nav-tab" onclick="showSch('t5',this)">Thứ 5</button>
+    <button class="nav-tab" onclick="showSch('t6',this)">Thứ 6</button>
+    <button class="nav-tab" onclick="showSch('t7',this)">Thứ 7</button>
+    <button class="nav-tab" onclick="showSch('cn',this)">Chủ nhật</button>
+  </div>
+
+  <!-- T2: Push trưa + Cardio tối + LP -->
+  <div class="sch-panel" id="sch-t2" style="display:block">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(79,142,247,.15);color:var(--accent)">GYM — PUSH 12h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH 20h</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Uống 500ml nước</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị đồ ăn sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn sáng</div><div class="sch-desc">3 trứng + 2 lát bánh mì đen · ~315 kcal</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến công ty</div><div class="sch-desc">Đến nơi trước 8h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack nhẹ trước tập</div><div class="sch-desc">1 trứng luộc + khoai lang nhỏ (80g) · Ăn trước tập 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent)">Gym — PUSH</div><div class="sch-desc">Ngực · Vai · Tricep · 6 bài · 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa sau tập</div><div class="sch-desc">Cơm 150g + thịt/cá 220g + rau 200g · ~590 kcal · Ngủ trưa 20 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến phòng cardio</div><div class="sch-desc">10 phút di chuyển</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Cardio — Đi bộ máy</div><div class="sch-desc">5.5–6.5 km/h · 60 phút LISS</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Nấu ăn · Tắm</div><div class="sch-desc">Di chuyển + nấu ăn + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
+    </div>
+  </div>
+
+  <!-- T3: Bơi sáng + Cardio tối + LP -->
+  <div class="sch-panel" id="sch-t3" style="display:none">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI 6h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">ĐI BỘ 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH 20h</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Nấu cơm hộp trưa</div><div class="sch-desc">Nấu đồ ăn mang đi · Uống 300ml nước trước bơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Chuẩn bị đồ bơi · Di chuyển đến hồ</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Học Bơi</div><div class="sch-desc">Lớp bơi — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng · Di chuyển</div><div class="sch-desc">Tắm 20 phút · 2 trứng + bánh mì · Đến công ty 8h</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty đến 12h</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa — Cơm hộp + Ngủ trưa</div><div class="sch-desc">Cơm 120g + thịt/cá 210g + rau · Ngủ 20–25 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Nghỉ ngơi</div><div class="sch-desc">Di chuyển về nhà</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Đi bộ máy 30 phút</div><div class="sch-desc">5.5–6.5 km/h · Bù cardio cho ngày không có cardio sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Nấu ăn · Ăn tối · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Luyện nghe · Speaking · Ngữ pháp — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
+    </div>
+  </div>
+
+  <!-- T4: Legs trưa + Cardio tối + LP -->
+  <div class="sch-panel" id="sch-t4" style="display:none">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">GYM — LEGS 12h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH 20h</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Uống 500ml nước</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị đồ ăn sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn sáng</div><div class="sch-desc">3 trứng + 2 lát bánh mì đen · ~315 kcal</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack nhẹ trước tập Legs</div><div class="sch-desc">Khoai lang 120g + sữa chua · Ngày Legs ăn nhiều hơn để có sức</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title" style="color:var(--warn)">Gym — LEGS</div><div class="sch-desc">Quad · Ham · Mông · Bắp chân · 6 bài · 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa — Ngày Legs ăn nhiều hơn</div><div class="sch-desc">Cơm 180g + thịt 230g + rau 200g · Ngủ trưa 20 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Cardio — Đi bộ máy</div><div class="sch-desc">5.5–6.5 km/h · 60 phút · Chân đã mệt — đi bộ nhẹ thôi</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Ăn tối · Tắm</div><div class="sch-desc">Nấu ăn + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
+    </div>
+  </div>
+
+  <!-- T5: Pull trưa + Cardio tối + LP -->
+  <div class="sch-panel" id="sch-t5" style="display:none">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">GYM — PULL 12h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH 20h</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Uống 500ml nước</div><div class="sch-desc">Vệ sinh cá nhân · Chuẩn bị ăn sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn sáng</div><div class="sch-desc">3 trứng + 2 lát bánh mì đen</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Snack nhẹ trước tập Pull</div><div class="sch-desc">1 trứng luộc + khoai lang nhỏ (80g)</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Gym — PULL</div><div class="sch-desc">Lưng · Bicep · 6 bài · 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa sau tập</div><div class="sch-desc">Cơm 150g + thịt/cá 220g + rau 200g · Ngủ trưa 20 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Cardio — Đi bộ máy</div><div class="sch-desc">5.5–6.5 km/h · 60 phút LISS</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Ăn tối · Tắm</div><div class="sch-desc">Nấu ăn + ăn tối + tắm rửa — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
+    </div>
+  </div>
+
+  <!-- T6: Bơi sáng + Đi bộ 30p tối + Tiếng Anh -->
+  <div class="sch-panel" id="sch-t6" style="display:none">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">BƠI 6h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">ĐI BỘ 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH 20h</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">5h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Nấu cơm hộp trưa</div><div class="sch-desc">Nấu đồ ăn mang đi · Uống 300ml nước trước bơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title">Chuẩn bị đi bơi</div><div class="sch-desc">Thay đồ · Di chuyển đến hồ</div></div></div>
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Học Bơi</div><div class="sch-desc">Lớp bơi — 1 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng · Di chuyển</div><div class="sch-desc">Tắm 20 phút · 2 trứng + bánh mì · Đến công ty 8h</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h30</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca sáng</div><div class="sch-desc">Công ty · Không có gym trưa</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa — Cơm hộp · Ngủ trưa</div><div class="sch-desc">Cơm 120g + thịt/cá 210g + rau · Ngủ 25 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">13h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title">Làm việc — Ca chiều</div><div class="sch-desc">Công ty đến 17h30</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Nghỉ ngơi</div><div class="sch-desc">Di chuyển về nhà</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Đi bộ máy 30 phút</div><div class="sch-desc">5.5–6.5 km/h · Bù cardio cho ngày không có cardio sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Nấu ăn · Ăn tối · Tắm</div><div class="sch-desc">Nấu + ăn tối + tắm rửa — 1 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">20h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Luyện nghe · Speaking · Ngữ pháp — 2 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">7 tiếng ngủ · Dậy 5h30</div></div></div>
+    </div>
+  </div>
+
+  <!-- T7: Gym Upper sáng + Cardio tối + Học + Cheat meal -->
+  <div class="sch-panel" id="sch-t7" style="display:none">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">GYM UPPER 7h30</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(45,212,191,.15);color:var(--teal)">CARDIO 18h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH 14h–17h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(248,113,113,.12);color:var(--danger)">CHEAT MEAL TỐI</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Ngủ thêm 1 tiếng</div><div class="sch-desc">Uống nước · Ăn nhẹ trước tập: 1 trứng + 1 lát bánh mì</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Di chuyển đến phòng gym</div><div class="sch-desc">Gym sáng vắng — không phải chờ máy</div></div></div>
+      <div class="sch-item"><div class="sch-time">7h30</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Gym — UPPER + CORE</div><div class="sch-desc">Thân trên tổng hợp · 6 bài · 1 tiếng 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">9h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Ăn sáng đầy đủ</div><div class="sch-desc">3 trứng + bánh mì + sữa chua · Bổ sung protein sau tập</div></div></div>
+      <div class="sch-item"><div class="sch-time">10h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ ngơi tự do</div><div class="sch-desc">Giải trí · Dọn dẹp · Chuẩn bị học</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa</div><div class="sch-desc">Cơm + thịt + rau · Bữa trưa đầy đủ</div></div></div>
+      <div class="sch-item"><div class="sch-time">14h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 3 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">17h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ ngơi</div><div class="sch-desc">Chuẩn bị cardio và cheat meal tối</div></div></div>
+      <div class="sch-item"><div class="sch-time">18h00</div><div class="sch-dot" style="background:var(--teal)"></div><div class="sch-content"><div class="sch-title" style="color:var(--teal)">Cardio — Đi bộ máy</div><div class="sch-desc">5.5–6.5 km/h · 60 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--danger)"></div><div class="sch-content"><div class="sch-title" style="color:var(--danger)">Cheat Meal tối</div><div class="sch-desc">Ăn thoải mái · Dừng ở 80% no · Hạn chế bia rượu</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">8 tiếng ngủ · Dậy 6h30 chủ nhật</div></div></div>
+    </div>
+  </div>
+
+  <!-- CN: Full body sáng + Tiếng Anh + LP + Bi-a -->
+  <div class="sch-panel" id="sch-cn" style="display:none">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(167,139,250,.15);color:var(--purple)">TIẾNG ANH 8h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(79,142,247,.15);color:var(--accent)">FULL BODY 10h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(52,211,153,.15);color:var(--accent2)">LẬP TRÌNH 14h–16h</span>
+      <span style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--warn)">BI-A 17h</span>
+    </div>
+    <div class="sch-timeline">
+      <div class="sch-item"><div class="sch-time">6h30</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Dậy · Ngủ thêm</div><div class="sch-desc">Uống nước · Ăn sáng nhẹ · Nghỉ ngơi</div></div></div>
+      <div class="sch-item"><div class="sch-time">8h00</div><div class="sch-dot" style="background:var(--purple)"></div><div class="sch-content"><div class="sch-title" style="color:var(--purple)">Học Tiếng Anh</div><div class="sch-desc">Luyện tập có hệ thống — 1 tiếng · Não tươi nhất buổi sáng</div></div></div>
+      <div class="sch-item"><div class="sch-time">9h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn sáng đầy đủ · Snack trước tập</div><div class="sch-desc">3 trứng + bánh mì · Khoai lang 100g trước tập 30 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">10h00</div><div class="sch-dot" style="background:var(--accent)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent)">Gym — FULL BODY</div><div class="sch-desc">Squat · Bench · RDL · OHP · Lat pulldown · Plank · 1 tiếng 15 phút</div></div></div>
+      <div class="sch-item"><div class="sch-time">11h15</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Tắm · Về nhà</div><div class="sch-desc">Nghỉ ngơi ngắn trước bữa trưa</div></div></div>
+      <div class="sch-item"><div class="sch-time">12h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title">Ăn trưa · Nghỉ trưa</div><div class="sch-desc">Cơm + thịt + rau · Nghỉ 20–30 phút trước khi học</div></div></div>
+      <div class="sch-item"><div class="sch-time">14h00</div><div class="sch-dot" style="background:var(--accent2)"></div><div class="sch-content"><div class="sch-title" style="color:var(--accent2)">Học Lập Trình</div><div class="sch-desc">Ôn tập & thực hành — 2 tiếng</div></div></div>
+      <div class="sch-item"><div class="sch-time">16h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Nghỉ · Chuẩn bị đi bi-a</div><div class="sch-desc">1 tiếng nghỉ ngơi</div></div></div>
       <div class="sch-item"><div class="sch-time">17h00</div><div class="sch-dot" style="background:var(--warn)"></div><div class="sch-content"><div class="sch-title" style="color:var(--warn)">Bi-a</div><div class="sch-desc">Chơi bi-a — 2 tiếng</div></div></div>
-      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà & Ăn tối</div><div class="sch-desc">Refeed tối · Chuẩn bị tinh thần tuần mới</div></div></div>
-      <div class="sch-item"><div class="sch-time">23h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">Nghỉ ngơi đầy đủ trước tuần mới</div></div></div>
+      <div class="sch-item"><div class="sch-time">19h00</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Về nhà · Ăn tối Refeed</div><div class="sch-desc">Cơm nhiều hơn · Chọn món nạc · Reset leptin tuần mới</div></div></div>
+      <div class="sch-item"><div class="sch-time">22h30</div><div class="sch-dot" style="background:var(--muted)"></div><div class="sch-content"><div class="sch-title">Đi ngủ</div><div class="sch-desc">8 tiếng ngủ · Dậy 5h30 thứ 2 bắt đầu tuần mới</div></div></div>
     </div>
   </div>
 </div>
   <div class="hero"><div class="hero-label">Theo dõi</div><div class="hero-title">Tiến độ & Checklist</div><div class="hero-sub">Tick vào các mục đã hoàn thành trong ngày</div></div>
   <div class="section-title">Checklist hôm nay</div>
   <div class="checklist">
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Dậy đúng giờ — 5h (ngày bơi) hoặc 5h30</div><div class="check-meta">Uống 500ml nước ngay khi dậy</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn sáng đủ — 3 trứng + 2 lát bánh mì đen</div><div class="check-meta">6h30 ngày thường · 7h50 ngày bơi · ~315 kcal</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn trưa đủ + ngủ trưa 20–25 phút</div><div class="check-meta">12h · Cơm + thịt + rau 150–200g</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn snack trước tập lúc 16h30</div><div class="check-meta">Khoai lang 120g + sữa chua · Ngày pickleball: khoai lang 100g</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Hoàn thành buổi tập / bơi / pickleball</div><div class="check-meta">Gym 18h–19h30 · Bơi 6h30 · Pickleball 17h30</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Uống đủ nước — 2.5L ngày thường · 3L ngày bơi+pickleball</div><div class="check-meta">Ngày T3 và T6 cần nhiều nhất</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Bữa tối sau tập đủ protein + rau nhiều</div><div class="check-meta">20h · Thịt/cá 200–220g + rau 200–250g · Cơm vừa phải</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Học tiếng Anh hoặc lập trình tối</div><div class="check-meta">21h–23h · Tiếng Anh sáng T2/T4/T6 lúc 5h45</div></div></div>
-    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ngủ đúng giờ — trước 23h30</div><div class="check-meta">Đảm bảo 5.5–6 tiếng · Ngày bơi ngủ 23h để dậy 5h</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Dậy đúng giờ — 5h30 (T2–T6) · 6h30 (T7/CN)</div><div class="check-meta">Uống 500ml nước ngay khi dậy</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Cardio sáng 5h45–6h30 (T2/T4/T5) hoặc Bơi 6h30 (T3/T6)</div><div class="check-meta">Đi bộ máy 45 phút · Bơi 1 tiếng · T7/CN không cardio sáng</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn sáng — 2 trứng + 2 lát bánh mì đen</div><div class="check-meta">~240 kcal · P 16g · Sau tắm rửa buổi sáng</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Học Tiếng Anh tại cty 7h30–8h30 (T2/T4/T5)</div><div class="check-meta">Flashcard / Nghe podcast / Luyện ngữ pháp · T3/T6 không học sáng</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Snack trước tập gym lúc 11h30 (T2/T4/T5)</div><div class="check-meta">1 trứng + khoai lang 80g · Ngày Legs T4: khoai lang 120g + sữa chua</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Hoàn thành gym đúng lịch</div><div class="check-meta">Push/Legs/Pull 12h (T2/T4/T5) · Upper 7h30 (T7) · Full body 10h (CN)</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ăn trưa đủ protein + ngủ trưa 20 phút</div><div class="check-meta">Thịt/cá 250g (ngày gym) · 210g (ngày bơi) · Legs: cơm 180g</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Uống đủ nước — 2.5L ngày thường · 3L ngày bơi</div><div class="check-meta">Bổ sung sau cardio, sau gym, sau bơi</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Học đúng lịch tối 20h–22h30</div><div class="check-meta">LP: T2/T4/T5 · TA: T3/T6 (ngày bơi) · TA sáng + LP chiều: T7/CN</div></div></div>
+    <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="check-text">Ngủ đúng 22h30</div><div class="check-meta">T2–T6: 7 tiếng · T7/CN: 8 tiếng (dậy 6h30)</div></div></div>
   </div>
   <div class="section-title">Nhập cân nặng</div>
   <div class="progress-wrap">
